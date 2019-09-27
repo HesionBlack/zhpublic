@@ -2,6 +2,9 @@ package cn.zh.zhbackend.canSeeGuan.Utils;
 
 import lombok.Data;
 
+/**
+ * 定义响应数据返回格式
+ */
 @Data
 public class AjaxResponse {
 

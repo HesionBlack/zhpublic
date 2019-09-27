@@ -8,6 +8,9 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * AES加密工具类
+ */
 public class AESUtil {
     //加密
     public static String aesEncrypt(String str, String key) throws Exception {
