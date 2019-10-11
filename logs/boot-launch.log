@@ -1,0 +1,21 @@
+2019-10-11 15:02:10.898 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 683 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:02:10.914 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:02:11.003 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:02:11.003 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:02:12.355 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:02:12.394 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-10-11 15:02:13.618 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:02:13.653 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:02:13.675 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:02:13.677 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:02:13.813 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:02:13.814 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2810 ms
+2019-10-11 15:02:14.426 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:02:14.542 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:346}] to 192.168.0.51:27017
+2019-10-11 15:02:14.546 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2110783}
+2019-10-11 15:02:15.098 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:02:15.398 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:02:15.504 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:02:15.571 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:02:15.580 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 5.972 seconds (JVM running for 8.976)
+2019-10-11 15:02:54.563 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:2, serverValue:347}] to 192.168.0.51:27017
