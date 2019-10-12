@@ -1,0 +1,506 @@
+2019-10-11 15:02:10.898 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 683 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:02:10.914 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:02:11.003 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:02:11.003 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:02:12.355 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:02:12.394 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-10-11 15:02:13.618 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:02:13.653 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:02:13.675 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:02:13.677 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:02:13.813 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:02:13.814 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2810 ms
+2019-10-11 15:02:14.426 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:02:14.542 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:346}] to 192.168.0.51:27017
+2019-10-11 15:02:14.546 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2110783}
+2019-10-11 15:02:15.098 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:02:15.398 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:02:15.504 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:02:15.571 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:02:15.580 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 5.972 seconds (JVM running for 8.976)
+2019-10-11 15:02:54.563 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:2, serverValue:347}] to 192.168.0.51:27017
+2019-10-11 15:03:34.578 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:3, serverValue:348}] to 192.168.0.51:27017
+2019-10-11 15:03:45.530 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:03:45.531 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:03:45.542 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 11 ms
+2019-10-11 15:03:45.806 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:4, serverValue:349}] to 192.168.0.51:27017
+2019-10-11 15:04:14.594 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da028f673089102ab4826d4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:5, serverValue:350}] to 192.168.0.51:27017
+2019-10-11 15:04:27.171 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-24	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:04:27.175 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	Thread-24	Closed connection [connectionId{localValue:4, serverValue:349}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:04:39.608 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 1370 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:04:39.687 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:04:39.791 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:04:39.792 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:04:40.881 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:04:40.911 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-10-11 15:04:41.884 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:04:41.942 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:04:41.957 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:04:41.958 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:04:42.078 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:04:42.078 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2286 ms
+2019-10-11 15:04:42.639 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:04:42.711 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da0298a730891055a38cf3e', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:351}] to 192.168.0.51:27017
+2019-10-11 15:04:42.716 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da0298a730891055a38cf3e', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=3333374}
+2019-10-11 15:04:43.252 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:04:43.520 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:04:43.565 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:04:43.618 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:04:43.623 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 4.915 seconds (JVM running for 7.238)
+2019-10-11 15:04:51.786 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:04:51.787 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:04:51.801 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 14 ms
+2019-10-11 15:04:52.073 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:2, serverValue:352}] to 192.168.0.51:27017
+2019-10-11 15:05:22.740 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da0298a730891055a38cf3e', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:3, serverValue:353}] to 192.168.0.51:27017
+2019-10-11 15:05:56.643 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-21	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:05:56.647 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	Thread-21	Closed connection [connectionId{localValue:2, serverValue:352}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:06:09.666 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 1800 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:06:09.681 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:06:09.864 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:06:09.865 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:06:12.200 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:06:12.262 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 54ms. Found 0 repository interfaces.
+2019-10-11 15:06:13.629 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:06:13.657 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:06:13.676 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:06:13.677 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:06:13.797 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:06:13.798 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 3932 ms
+2019-10-11 15:06:14.294 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:06:14.361 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:354}] to 192.168.0.51:27017
+2019-10-11 15:06:14.365 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1934179}
+2019-10-11 15:06:15.000 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:06:15.495 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:06:15.551 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:06:15.625 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:06:15.633 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 7.077 seconds (JVM running for 9.474)
+2019-10-11 15:06:29.065 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:06:29.066 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:06:29.119 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 51 ms
+2019-10-11 15:06:29.709 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:2, serverValue:355}] to 192.168.0.51:27017
+2019-10-11 15:06:54.388 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:3, serverValue:356}] to 192.168.0.51:27017
+2019-10-11 15:07:34.406 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:4, serverValue:357}] to 192.168.0.51:27017
+2019-10-11 15:08:14.423 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:5, serverValue:358}] to 192.168.0.51:27017
+2019-10-11 15:08:54.443 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:6, serverValue:359}] to 192.168.0.51:27017
+2019-10-11 15:09:34.456 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:7, serverValue:360}] to 192.168.0.51:27017
+2019-10-11 15:10:14.472 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:8, serverValue:361}] to 192.168.0.51:27017
+2019-10-11 15:10:54.489 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:9, serverValue:362}] to 192.168.0.51:27017
+2019-10-11 15:11:34.504 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:10, serverValue:363}] to 192.168.0.51:27017
+2019-10-11 15:12:14.522 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:11, serverValue:365}] to 192.168.0.51:27017
+2019-10-11 15:12:54.541 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:12, serverValue:366}] to 192.168.0.51:27017
+2019-10-11 15:13:34.556 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:13, serverValue:367}] to 192.168.0.51:27017
+2019-10-11 15:14:14.569 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:14, serverValue:368}] to 192.168.0.51:27017
+2019-10-11 15:14:54.581 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:15, serverValue:369}] to 192.168.0.51:27017
+2019-10-11 15:15:34.593 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da029e67308910708620ea4', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:16, serverValue:370}] to 192.168.0.51:27017
+2019-10-11 15:15:56.308 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-25	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:15:56.314 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	Thread-25	Closed connection [connectionId{localValue:2, serverValue:355}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:16:11.399 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 4479 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:16:11.482 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:16:11.600 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:16:11.601 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:16:12.896 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:16:12.936 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.
+2019-10-11 15:16:14.097 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:16:14.122 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:16:14.173 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:16:14.175 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:16:14.397 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:16:14.397 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2795 ms
+2019-10-11 15:16:14.909 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:16:14.980 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:371}] to 192.168.0.51:27017
+2019-10-11 15:16:14.985 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2037232}
+2019-10-11 15:16:15.520 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:16:15.779 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:16:15.830 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:16:15.887 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:16:15.894 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 5.471 seconds (JVM running for 8.069)
+2019-10-11 15:16:28.349 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:16:28.352 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:16:28.370 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 17 ms
+2019-10-11 15:16:29.220 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:2, serverValue:372}] to 192.168.0.51:27017
+2019-10-11 15:16:55.006 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:3, serverValue:373}] to 192.168.0.51:27017
+2019-10-11 15:17:35.022 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:4, serverValue:374}] to 192.168.0.51:27017
+2019-10-11 15:18:15.042 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:5, serverValue:375}] to 192.168.0.51:27017
+2019-10-11 15:18:55.056 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:6, serverValue:376}] to 192.168.0.51:27017
+2019-10-11 15:19:35.067 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:7, serverValue:377}] to 192.168.0.51:27017
+2019-10-11 15:20:15.083 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:8, serverValue:378}] to 192.168.0.51:27017
+2019-10-11 15:20:55.096 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:9, serverValue:379}] to 192.168.0.51:27017
+2019-10-11 15:21:35.115 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02c3e730891117fb07843', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:10, serverValue:380}] to 192.168.0.51:27017
+2019-10-11 15:21:35.988 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-23	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:21:35.993 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	Thread-23	Closed connection [connectionId{localValue:2, serverValue:372}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:22:02.038 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 6073 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:22:02.056 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:22:02.174 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:22:02.176 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:22:03.287 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:22:03.317 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-10-11 15:22:05.024 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:22:05.067 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:22:05.201 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:22:05.225 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:22:05.684 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:22:05.685 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 3509 ms
+2019-10-11 15:22:06.848 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:22:06.979 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02d9e73089117b9f8945d', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:381}] to 192.168.0.51:27017
+2019-10-11 15:22:06.984 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02d9e73089117b9f8945d', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2111423}
+2019-10-11 15:22:07.873 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:22:08.433 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:22:08.490 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:22:08.742 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:22:08.751 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 7.643 seconds (JVM running for 11.142)
+2019-10-11 15:22:16.240 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:22:16.241 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:22:16.274 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 31 ms
+2019-10-11 15:22:16.836 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:2, serverValue:382}] to 192.168.0.51:27017
+2019-10-11 15:22:18.068 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-2	Opened connection [connectionId{localValue:3, serverValue:383}] to 192.168.0.51:27017
+2019-10-11 15:22:41.066 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-4	Opened connection [connectionId{localValue:4, serverValue:384}] to 192.168.0.51:27017
+2019-10-11 15:22:43.978 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-6	Opened connection [connectionId{localValue:5, serverValue:385}] to 192.168.0.51:27017
+2019-10-11 15:22:47.004 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02d9e73089117b9f8945d', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:6, serverValue:386}] to 192.168.0.51:27017
+2019-10-11 15:23:27.025 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02d9e73089117b9f8945d', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:7, serverValue:387}] to 192.168.0.51:27017
+2019-10-11 15:24:07.044 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02d9e73089117b9f8945d', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:8, serverValue:388}] to 192.168.0.51:27017
+2019-10-11 15:24:19.389 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-26	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:24:47.673 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting MonodbdemoApplication on macdeMac.local with PID 6797 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-11 15:24:47.685 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-11 15:24:47.822 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 15:24:47.823 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 15:24:49.209 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-11 15:24:49.238 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2019-10-11 15:24:50.229 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-11 15:24:50.254 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:24:50.273 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-11 15:24:50.274 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 15:24:50.427 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-11 15:24:50.427 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2604 ms
+2019-10-11 15:24:50.934 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-11 15:24:51.003 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:389}] to 192.168.0.51:27017
+2019-10-11 15:24:51.007 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1952944}
+2019-10-11 15:24:51.495 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:24:51.740 +0800	INFO	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	57	restartedMain	LiveReload server is running on port 35729
+2019-10-11 15:24:51.789 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-11 15:24:51.850 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-11 15:24:51.856 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started MonodbdemoApplication in 5.447 seconds (JVM running for 10.514)
+2019-10-11 15:24:57.820 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:24:57.821 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:24:57.839 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 18 ms
+2019-10-11 15:24:58.107 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Opened connection [connectionId{localValue:2, serverValue:390}] to 192.168.0.51:27017
+2019-10-11 15:25:26.847 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-6	Opened connection [connectionId{localValue:3, serverValue:391}] to 192.168.0.51:27017
+2019-10-11 15:25:31.030 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:4, serverValue:392}] to 192.168.0.51:27017
+2019-10-11 15:25:39.820 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-7	Closed connection [connectionId{localValue:3, serverValue:391}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:25:39.830 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-7	Opened connection [connectionId{localValue:5, serverValue:393}] to 192.168.0.51:27017
+2019-10-11 15:25:47.206 +0800	WARN	com.mongodb.diagnostics.logging.SLF4JLogger	86	http-nio-9988-exec-4	Got socket exception on connection [connectionId{localValue:2, serverValue:390}] to 192.168.0.51:27017. All connections to 192.168.0.51:27017 will be closed.
+2019-10-11 15:25:47.209 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-4	Closed connection [connectionId{localValue:2, serverValue:390}] to 192.168.0.51:27017 because there was a socket exception raised by this connection.
+2019-10-11 15:25:47.231 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-4	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:99) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:444) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:72) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:200) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:269) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:131) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:123) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:242) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:233) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:136) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:701) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:462) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:406) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:179) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:132) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:86) ~[mongodb-driver-3.8.2.jar:?]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2671) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2408) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2391) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:829) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:815) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at cn.zh.zhbackend.canseeguan.dao.AlarmDao.getCurrentAlarmCount(AlarmDao.java:52) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventService.GetCurrentAlarmCount(AlarmEventService.java:41) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.GetCurrentAlarmCount(DataController.java:53) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-11 15:26:00.059 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-8	Cluster description not yet available. Waiting for 30000 ms before timing out
+2019-10-11 15:26:03.476 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-9	Cluster description not yet available. Waiting for 30000 ms before timing out
+2019-10-11 15:26:04.558 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-10	Cluster description not yet available. Waiting for 30000 ms before timing out
+2019-10-11 15:26:07.216 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:6, serverValue:394}] to 192.168.0.51:27017
+2019-10-11 15:26:07.220 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-8	Closed connection [connectionId{localValue:5, serverValue:393}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:26:07.226 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-9	Opened connection [connectionId{localValue:7, serverValue:395}] to 192.168.0.51:27017
+2019-10-11 15:26:07.227 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-10	Opened connection [connectionId{localValue:8, serverValue:396}] to 192.168.0.51:27017
+2019-10-11 15:26:07.228 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-8	Opened connection [connectionId{localValue:9, serverValue:397}] to 192.168.0.51:27017
+2019-10-11 15:26:47.238 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:10, serverValue:398}] to 192.168.0.51:27017
+2019-10-11 15:27:27.251 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:11, serverValue:399}] to 192.168.0.51:27017
+2019-10-11 15:28:07.264 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:12, serverValue:400}] to 192.168.0.51:27017
+2019-10-11 15:28:47.279 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:13, serverValue:401}] to 192.168.0.51:27017
+2019-10-11 15:29:27.294 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:14, serverValue:402}] to 192.168.0.51:27017
+2019-10-11 15:30:07.323 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:15, serverValue:404}] to 192.168.0.51:27017
+2019-10-11 15:30:47.337 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:16, serverValue:405}] to 192.168.0.51:27017
+2019-10-11 15:31:27.349 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:17, serverValue:406}] to 192.168.0.51:27017
+2019-10-11 15:32:07.364 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:18, serverValue:407}] to 192.168.0.51:27017
+2019-10-11 15:32:47.374 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:19, serverValue:408}] to 192.168.0.51:27017
+2019-10-11 15:33:27.390 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:20, serverValue:409}] to 192.168.0.51:27017
+2019-10-11 15:34:07.411 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:21, serverValue:410}] to 192.168.0.51:27017
+2019-10-11 15:34:47.422 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:22, serverValue:411}] to 192.168.0.51:27017
+2019-10-11 15:35:27.434 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:23, serverValue:412}] to 192.168.0.51:27017
+2019-10-11 15:36:07.447 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:24, serverValue:413}] to 192.168.0.51:27017
+2019-10-11 15:36:47.467 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:25, serverValue:414}] to 192.168.0.51:27017
+2019-10-11 15:37:27.502 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:26, serverValue:415}] to 192.168.0.51:27017
+2019-10-11 15:37:27.945 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Closed connection [connectionId{localValue:9, serverValue:397}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:37:27.955 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Closed connection [connectionId{localValue:8, serverValue:396}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:37:27.957 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Closed connection [connectionId{localValue:7, serverValue:395}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-11 15:37:27.972 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Opened connection [connectionId{localValue:27, serverValue:416}] to 192.168.0.51:27017
+2019-10-11 15:37:51.692 +0800	WARN	com.mongodb.diagnostics.logging.SLF4JLogger	86	http-nio-9988-exec-6	Got socket exception on connection [connectionId{localValue:27, serverValue:416}] to 192.168.0.51:27017. All connections to 192.168.0.51:27017 will be closed.
+2019-10-11 15:37:51.694 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-6	Closed connection [connectionId{localValue:27, serverValue:416}] to 192.168.0.51:27017 because there was a socket exception raised by this connection.
+2019-10-11 15:37:51.698 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-6	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:99) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:444) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:72) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:200) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:269) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:131) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:123) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:242) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:233) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:136) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:701) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:462) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:406) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:179) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:132) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:86) ~[mongodb-driver-3.8.2.jar:?]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2671) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2408) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2391) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:829) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:815) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at cn.zh.zhbackend.canseeguan.dao.AlarmDao.getQueryAlarms(AlarmDao.java:69) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventService.getQueryAlarms(AlarmEventService.java:46) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.getQueryAlarms(DataController.java:64) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-11 15:38:07.525 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:28, serverValue:417}] to 192.168.0.51:27017
+2019-10-11 15:38:47.539 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:29, serverValue:418}] to 192.168.0.51:27017
+2019-10-11 15:39:27.555 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:30, serverValue:419}] to 192.168.0.51:27017
+2019-10-11 15:40:07.581 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:31, serverValue:420}] to 192.168.0.51:27017
+2019-10-11 15:40:47.594 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:32, serverValue:421}] to 192.168.0.51:27017
+2019-10-11 15:41:27.606 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:33, serverValue:422}] to 192.168.0.51:27017
+2019-10-11 15:42:07.616 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:34, serverValue:424}] to 192.168.0.51:27017
+2019-10-11 15:42:47.630 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:35, serverValue:425}] to 192.168.0.51:27017
+2019-10-11 15:43:47.643 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	76	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Exception in monitor thread while connecting to server 192.168.0.51:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:537) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:428) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:106) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:63) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:127) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:131) [mongodb-driver-core-3.8.2.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	... 9 more
+2019-10-11 15:43:57.654 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:37, serverValue:427}] to 192.168.0.51:27017
+2019-10-11 15:43:57.656 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1216113}
+2019-10-11 15:44:37.668 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:38, serverValue:428}] to 192.168.0.51:27017
+2019-10-11 15:45:17.683 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:39, serverValue:429}] to 192.168.0.51:27017
+2019-10-11 15:45:57.696 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:40, serverValue:430}] to 192.168.0.51:27017
+2019-10-11 15:46:37.708 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:41, serverValue:431}] to 192.168.0.51:27017
+2019-10-11 15:47:17.720 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:42, serverValue:432}] to 192.168.0.51:27017
+2019-10-11 15:47:57.732 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:43, serverValue:433}] to 192.168.0.51:27017
+2019-10-11 15:48:37.746 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:44, serverValue:434}] to 192.168.0.51:27017
+2019-10-11 15:49:17.759 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:45, serverValue:435}] to 192.168.0.51:27017
+2019-10-11 15:49:57.771 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:46, serverValue:436}] to 192.168.0.51:27017
+2019-10-11 15:50:37.782 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:47, serverValue:437}] to 192.168.0.51:27017
+2019-10-11 15:51:17.798 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:48, serverValue:439}] to 192.168.0.51:27017
+2019-10-11 15:51:57.819 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:49, serverValue:440}] to 192.168.0.51:27017
+2019-10-11 15:52:37.840 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:50, serverValue:441}] to 192.168.0.51:27017
+2019-10-11 15:53:17.850 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:51, serverValue:442}] to 192.168.0.51:27017
+2019-10-11 15:53:57.865 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:52, serverValue:443}] to 192.168.0.51:27017
+2019-10-11 15:54:37.886 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:53, serverValue:444}] to 192.168.0.51:27017
+2019-10-11 15:55:17.909 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:54, serverValue:445}] to 192.168.0.51:27017
+2019-10-11 15:55:57.928 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:55, serverValue:446}] to 192.168.0.51:27017
+2019-10-11 15:56:37.950 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:56, serverValue:447}] to 192.168.0.51:27017
+2019-10-11 15:57:17.968 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:57, serverValue:448}] to 192.168.0.51:27017
+2019-10-11 16:20:10.050 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:58, serverValue:452}] to 192.168.0.51:27017
+2019-10-11 16:20:50.063 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:59, serverValue:453}] to 192.168.0.51:27017
+2019-10-11 16:21:30.079 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:60, serverValue:454}] to 192.168.0.51:27017
+2019-10-11 16:22:10.098 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:61, serverValue:455}] to 192.168.0.51:27017
+2019-10-11 16:22:50.111 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:62, serverValue:456}] to 192.168.0.51:27017
+2019-10-11 16:23:30.123 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:63, serverValue:457}] to 192.168.0.51:27017
+2019-10-11 16:24:10.136 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:64, serverValue:458}] to 192.168.0.51:27017
+2019-10-11 16:24:50.149 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:65, serverValue:459}] to 192.168.0.51:27017
+2019-10-11 16:25:30.163 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:66, serverValue:460}] to 192.168.0.51:27017
+2019-10-11 16:26:10.174 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:67, serverValue:461}] to 192.168.0.51:27017
+2019-10-11 16:26:50.187 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:68, serverValue:462}] to 192.168.0.51:27017
+2019-10-11 16:27:30.203 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:69, serverValue:463}] to 192.168.0.51:27017
+2019-10-11 16:28:10.216 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:70, serverValue:464}] to 192.168.0.51:27017
+2019-10-11 16:28:50.232 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:71, serverValue:465}] to 192.168.0.51:27017
+2019-10-11 16:29:30.248 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:72, serverValue:466}] to 192.168.0.51:27017
+2019-10-11 16:30:10.274 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:73, serverValue:468}] to 192.168.0.51:27017
+2019-10-11 16:30:50.287 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:74, serverValue:469}] to 192.168.0.51:27017
+2019-10-11 16:31:30.300 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:75, serverValue:470}] to 192.168.0.51:27017
+2019-10-11 16:32:10.314 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:76, serverValue:471}] to 192.168.0.51:27017
+2019-10-11 16:32:50.327 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:77, serverValue:472}] to 192.168.0.51:27017
+2019-10-11 16:33:30.335 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:78, serverValue:473}] to 192.168.0.51:27017
+2019-10-11 16:34:10.349 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:79, serverValue:474}] to 192.168.0.51:27017
+2019-10-11 16:34:50.367 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:80, serverValue:475}] to 192.168.0.51:27017
+2019-10-11 16:35:30.388 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:81, serverValue:476}] to 192.168.0.51:27017
+2019-10-11 16:36:10.403 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:82, serverValue:477}] to 192.168.0.51:27017
+2019-10-11 16:36:50.417 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:83, serverValue:478}] to 192.168.0.51:27017
+2019-10-11 16:37:30.433 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:84, serverValue:479}] to 192.168.0.51:27017
+2019-10-11 16:38:10.451 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:85, serverValue:480}] to 192.168.0.51:27017
+2019-10-11 16:38:50.466 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:86, serverValue:481}] to 192.168.0.51:27017
+2019-10-11 16:39:30.479 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:87, serverValue:483}] to 192.168.0.51:27017
+2019-10-11 16:40:10.489 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:88, serverValue:484}] to 192.168.0.51:27017
+2019-10-11 16:40:50.506 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:89, serverValue:485}] to 192.168.0.51:27017
+2019-10-11 16:41:30.520 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:90, serverValue:486}] to 192.168.0.51:27017
+2019-10-11 16:42:10.528 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:91, serverValue:487}] to 192.168.0.51:27017
+2019-10-11 16:42:50.544 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:92, serverValue:488}] to 192.168.0.51:27017
+2019-10-11 16:43:30.561 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:93, serverValue:489}] to 192.168.0.51:27017
+2019-10-11 16:44:10.577 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:94, serverValue:490}] to 192.168.0.51:27017
+2019-10-11 16:44:50.589 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:95, serverValue:491}] to 192.168.0.51:27017
+2019-10-11 16:45:30.600 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:96, serverValue:492}] to 192.168.0.51:27017
+2019-10-11 16:46:10.616 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:97, serverValue:493}] to 192.168.0.51:27017
+2019-10-11 16:46:50.630 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:98, serverValue:494}] to 192.168.0.51:27017
+2019-10-11 16:47:30.646 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:99, serverValue:495}] to 192.168.0.51:27017
+2019-10-11 16:48:10.660 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:100, serverValue:498}] to 192.168.0.51:27017
+2019-10-11 16:48:50.671 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:101, serverValue:499}] to 192.168.0.51:27017
+2019-10-11 16:49:30.683 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:102, serverValue:500}] to 192.168.0.51:27017
+2019-10-11 16:50:10.698 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:103, serverValue:501}] to 192.168.0.51:27017
+2019-10-11 16:50:50.709 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:104, serverValue:503}] to 192.168.0.51:27017
+2019-10-11 16:51:30.722 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:105, serverValue:504}] to 192.168.0.51:27017
+2019-10-11 16:52:10.734 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:106, serverValue:505}] to 192.168.0.51:27017
+2019-10-11 16:52:50.748 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:107, serverValue:506}] to 192.168.0.51:27017
+2019-10-11 16:53:30.760 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5da02e427308911a8d574faa', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:108, serverValue:507}] to 192.168.0.51:27017
+2019-10-11 16:53:59.175 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-24	Shutting down ExecutorService 'applicationTaskExecutor'
