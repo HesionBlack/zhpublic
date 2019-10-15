@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canSeeGuan.Utils;
+package cn.zh.zhbackend.canseeguan.Utils;
 
 
 import sun.misc.BASE64Decoder;

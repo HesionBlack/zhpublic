@@ -1,10 +1,10 @@
-package cn.zh.zhbackend.canSeeGuan.service.Impl;
+package cn.zh.zhbackend.canseeguan.service.Impl;
 
 
-import cn.zh.zhbackend.canSeeGuan.dao.UserDao;
-import cn.zh.zhbackend.canSeeGuan.domain.ResModel;
-import cn.zh.zhbackend.canSeeGuan.domain.User;
-import cn.zh.zhbackend.canSeeGuan.service.IUserService;
+import cn.zh.zhbackend.canseeguan.dao.UserDao;
+import cn.zh.zhbackend.canseeguan.domain.ResModel;
+import cn.zh.zhbackend.canseeguan.domain.User;
+import cn.zh.zhbackend.canseeguan.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +19,7 @@ public class UserService implements IUserService {
     @Override
     public ResModel login(User user) throws Exception {
          List<User> isloginSuccess = userDao.login(user);
+        System.out.println("Service"+isloginSuccess);
         if(!isloginSuccess.isEmpty()){
             res.setCode(200);
             return res;

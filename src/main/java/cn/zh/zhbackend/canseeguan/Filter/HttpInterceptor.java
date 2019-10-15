@@ -1,4 +1,4 @@
-package cn.security.interceptors;/**
+package cn.zh.zhbackend.canseeguan.Filter;/**
  * ClassName: HttpInterceptor <br/>
  * Description: <br/>
  * date: 2019/10/11 上午9:28<br/>
@@ -8,6 +8,8 @@ package cn.security.interceptors;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Utils.AjaxResponse;
+import cn.zh.zhbackend.canseeguan.Utils.JwtUtil;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,7 +36,27 @@ public class HttpInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("请求前拦截");
-        return true;
+        System.out.println(request.getServletPath());
+        if ("/user/login/".equals(request.getServletPath())){
+            return true;
+        }
+        String Authorization = request.getHeader("Set-Authorization-Token");
+        Boolean istrueToken = JwtUtil.validateToken(Authorization);
+        if (istrueToken){
+            return true;
+        }else {
+            response.setCharacterEncoding("UTF-8");
+            response.setContentType("application/json; charset=utf-8");
+            try {
+                response.getWriter().append(AjaxResponse.fail("认证失败，未通过拦截器").toString());
+                System.out.println("认证失败，未通过拦截器");
+            } catch (Exception e) {
+                e.printStackTrace();
+                response.sendError(500);
+                return false;
+            }
+        }
+        return false;
     }
 
     /**
@@ -42,6 +64,7 @@ public class HttpInterceptor implements HandlerInterceptor {
      */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        response.setContentType("application/json;charset=UTF-8");
         System.out.println("请求完成后的操作...");
     }
 
@@ -50,6 +73,7 @@ public class HttpInterceptor implements HandlerInterceptor {
      */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+
         System.out.println("视图渲染之后...");
     }
 }

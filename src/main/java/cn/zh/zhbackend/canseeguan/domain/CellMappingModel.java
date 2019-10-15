@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canSeeGuan.domain;
+package cn.zh.zhbackend.canseeguan.domain;
 
 import lombok.Data;
 

@@ -1,4 +1,9 @@
-package cn.zh.zhbackend.canSeeGuan.domain;
+package cn.zh.zhbackend.canseeguan.domain;
 
+import lombok.Data;
+
+@Data
 public class ReturnValue {
+
+    String erroMsg;
 }

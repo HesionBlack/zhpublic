@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canseeguan.Utils;/**
+package cn.zh.zhbackend.canseeguan.domain;/**
  * ClassName: ListQueryModel <br/>
  * Description: <br/>
  * date: 2019/10/11 下午4:41<br/>
@@ -7,6 +7,10 @@ package cn.zh.zhbackend.canseeguan.Utils;/**
  * @version
  * @since JDK 1.8
  */
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @program: zhbackend
@@ -17,45 +21,18 @@ package cn.zh.zhbackend.canseeguan.Utils;/**
  *
  * @create: 2019-10-11 16:41
  **/
+@Data
+@ToString(callSuper = true)
 public class ListQueryModel {
     public int pageIndex;
     public int pageItemCount;
     public WhereCondition[] whereConditions;
     public OrderCondition[] orderConditions;
-
-    class WhereCondition
-    {
-        public String field;
-        public WhereConditionMethod method;
-        public Object value;
-    }
-
-    enum WhereConditionMethod
-    {
-        EQUAL,
-        NOT_EQUAL,
-        LIKE,
-        LESS_THAN,
-        MORE_THAN,
-        LESS_OR_EQUAL_THAN,
-        MORE_OR_EQUAL_THAN,
-        IN,
-        BTWEEN_LIST
-    }
-
-    class OrderCondition
-    {
-        public String field;
-        public OrderConditionMethod method;
-    }
-
-    enum OrderConditionMethod
-    {
-        ASC,
-        DESC
-    }
-
 }
+
+
+
+
 
 
 

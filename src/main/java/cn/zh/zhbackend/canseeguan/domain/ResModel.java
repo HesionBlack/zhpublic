@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canSeeGuan.domain;
+package cn.zh.zhbackend.canseeguan.domain;
 
 import lombok.Data;
 
@@ -23,4 +23,6 @@ public class ResModel {
     /// 编码
     /// </summary>
     public int code;
+
+
 }

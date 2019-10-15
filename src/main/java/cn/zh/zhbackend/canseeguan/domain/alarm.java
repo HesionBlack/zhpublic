@@ -1,10 +1,14 @@
 package cn.zh.zhbackend.canseeguan.domain;
 
 import lombok.Data;
+import org.bson.codecs.pojo.annotations.BsonId;
+import org.bson.codecs.pojo.annotations.BsonProperty;
+import org.bson.types.ObjectId;
 
 @Data
-public class AlarmRawModel {
-    public Long _id;
+public class alarm {
+    @BsonId
+    public ObjectId _id;
     public String SerialNo;// 序列号
     public String ServerID;// 服务器
     public String TagID;// 变量id

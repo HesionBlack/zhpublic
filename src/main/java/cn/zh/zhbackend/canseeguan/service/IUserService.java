@@ -1,8 +1,8 @@
-package cn.zh.zhbackend.canSeeGuan.service;
+package cn.zh.zhbackend.canseeguan.service;
 
 
-import cn.zh.zhbackend.canSeeGuan.domain.ResModel;
-import cn.zh.zhbackend.canSeeGuan.domain.User;
+import cn.zh.zhbackend.canseeguan.domain.ResModel;
+import cn.zh.zhbackend.canseeguan.domain.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canSeeGuan.Utils;
+package cn.zh.zhbackend.canseeguan.Utils;
 
 import lombok.Data;
 
@@ -6,13 +6,12 @@ import lombok.Data;
  * 定义响应数据返回格式
  */
 @Data
-public class AjaxResponse {
+public class AjaxResponse{
 
-    private boolean isSuccess;   //请求是否处理成功
+    private boolean success;   //请求是否处理成功
     private int code;          //请求响应状态码（200、400、500）
     private String message;  //请求结果描述信息
     private Object data;  //请求结果数据
-
     private AjaxResponse() {
 
     }

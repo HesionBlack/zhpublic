@@ -1,4 +1,4 @@
-package cn.zh.zhbackend.canSeeGuan.Utils;/**
+package cn.zh.zhbackend.canseeguan.Utils;/**
  * ClassName: JwtUtil <br/>
  * Description: <br/>
  * date: 2019/10/10 上午9:48<br/>
@@ -34,18 +34,19 @@ public class JwtUtil {
                 .setExpiration(new Date(System.currentTimeMillis() + 3600_000_000L))
                 .signWith(SignatureAlgorithm.HS256,SECRET)
                 .compact();
-        return "Bearer"+jwt;
+        return "Bearer "+jwt;
     }
 
-    public static void validateToken(String token) {
+    public static Boolean validateToken(String token) {
         try {
             // parse the token.
             Map<String, Object> body = Jwts.parser()
                     .setSigningKey(SECRET)
                     .parseClaimsJws(token.replace("Bearer ",""))
                     .getBody();
+            return true;
         }catch (Exception e){
-            throw new IllegalStateException("Invalid Token. "+e.getMessage());
+            return false;
         }
     }
 }

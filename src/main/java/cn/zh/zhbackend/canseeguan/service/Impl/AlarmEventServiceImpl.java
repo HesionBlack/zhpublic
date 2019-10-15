@@ -32,7 +32,7 @@ import java.util.*;
  **/
 @Slf4j
 @Service
-public class AlarmEventService implements IAlarmEventService {
+public class AlarmEventServiceImpl implements IAlarmEventService {
 
     @Autowired
     private AlarmDao alarmDao;
@@ -54,7 +54,7 @@ public class AlarmEventService implements IAlarmEventService {
     @Override
     public List<AlarmModel> GetAlarmList(ListQueryModel listQueryModel) throws Exception {
         List<AlarmModel> alarmModels = new ArrayList<AlarmModel>();
-        Map<Integer, TagMappingModel> dicTagDeviceMapping = AlarmEventService.dicTagDeviceMapping;
+        Map<Integer, TagMappingModel> dicTagDeviceMapping = AlarmEventServiceImpl.dicTagDeviceMapping;
         List<alarm> alarms = alarmDao.GetAlarmList(listQueryModel);
         for (alarm alarm :
                 alarms) {
@@ -75,10 +75,10 @@ public class AlarmEventService implements IAlarmEventService {
         Map<String, TagModel> tempTags = new HashMap<>();
         List<DeviceModel> deviceList = new ArrayList<>(3);
         List<String> tagIds = new ArrayList<>();
-        Map<Integer, TagMappingModel> dicTagDeviceMapping = AlarmEventService.dicTagDeviceMapping;
+        Map<Integer, TagMappingModel> dicTagDeviceMapping = AlarmEventServiceImpl.dicTagDeviceMapping;
 
 
-        if (!(dicTagDeviceMapping.isEmpty()) && dicTagDeviceMapping != null) {
+        if (!(dicTagDeviceMapping.isEmpty()) && null!= dicTagDeviceMapping ) {
             log.info("dicTagDeviceMapping has value");
             if (deviceIds.length > 0) {
                 log.info("deviceId > 0 ");
@@ -90,16 +90,20 @@ public class AlarmEventService implements IAlarmEventService {
                     for (int i = 0; i < length; i++) {
                         if (value.deviceId.equals(deviceIds[i])) {
                             mappingResult.put(key, value);
+                            log.info(key+":"+value);
                             log.info("设备对比完毕");
                         }
                     }
 
                 });
-                //对比完成以后设备详细信息，存入结果集
-                int mappingsize = mappingResult.size();
-                TagModel[] tagModels = new TagModel[mappingsize];
-                mappingResult.forEach((key1, value1) -> {
-                    log.debug("mappingResult.value" + value1);
+                List<tag> tags = alarmDao.GetDevices();
+                List<TagModel> tagModels = new ArrayList<>();
+                //对比完成以后,设备详细信息，存入结果集
+                for (Map.Entry<Integer, TagMappingModel> entry : mappingResult.entrySet()) {
+                    Integer key1 = entry.getKey();
+                    TagMappingModel value1 = entry.getValue();
+                    log.info("mappingResult:" + key1 + ":" + value1);
+
                     DeviceModel device = new DeviceModel();
                     device.buildingId = value1.buildingId;
                     device.floorId = value1.floorId;
@@ -109,36 +113,33 @@ public class AlarmEventService implements IAlarmEventService {
                     device.deviceType = value1.deviceType;
                     device.deviceMapString = value1.deviceMapString;
 
+                    TagModel tagModel = new TagModel();
+                    tagModel.tagId = value1.tagId;
+                    tagModel.tagKey = value1.tagKey;
+                    tagModel.tagName = value1.tagName;
+                    System.out.println(tagModel.toString());
+                    tagIds.add(tagModel.tagId);
+                    tempTags.put(tagModel.tagId, tagModel);
+                    tagModels.add(tagModel);
+                    device.paramList = tagModels.toArray(new TagModel[2]);
+                    //向数据库查询温度数据
 
-                    mappingResult.forEach((key, value) -> {
+                    for (tag tag : tags) {
+                        System.out.println(tag.tagId + ":" + tag.val);
+                        tempTags.forEach((key, value) -> {
 
-                        TagModel tagModel = new TagModel();
-                        tagModel.tagId = value.tagId;
-                        tagModel.tagKey = value.tagKey;
-                        tagModel.tagName = value.tagName;
-                        tagIds.add(tagModel.tagId);
-                        tempTags.put(tagModel.tagId, tagModel);
-
-                        device.paramList = tagModels;
-
-                    });
+                            if (key.equals(tag.tagId)) {
+                                value.tagVal = tag.val;
+                            }
+                        });
+                    }
                     deviceList.add(device);
-                });
-                //向数据库查询温度数据
-                List<tag> tags = alarmDao.GetDevices(deviceIds);
-
-                for (tag tag :
-                        tags) {
-                    System.out.println(tag.tagId + ":" + tag.val);
-                    tempTags.forEach((key, value) -> {
-                        int n = 0;
-                        if (key.equals(tag.tagId)) {
-                            value.tagVal = tag.val;
-                        }
-                        tagModels[n] = tagModel;
-                        n++;
-                    });
                 }
+
+
+
+
+
             }
 
 

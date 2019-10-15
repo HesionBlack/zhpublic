@@ -1,9 +1,11 @@
 package cn.zh.zhbackend.canseeguan.domain;
 
+import lombok.Data;
 import org.bson.BsonElement;
 import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.types.ObjectId;
 
+@Data
 public class tag {
     @BsonId
     public ObjectId _id;

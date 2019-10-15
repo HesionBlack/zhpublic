@@ -1,5 +1,11 @@
 package cn.zh.zhbackend.canseeguan.service;
 
+import cn.zh.zhbackend.canseeguan.domain.*;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
 /**
  * ClassName: IAlarmEventService <br/>
  * Description: <br/>
@@ -9,4 +15,9 @@ package cn.zh.zhbackend.canseeguan.service;
  * @since JDK 1.8
  */
 public interface IAlarmEventService {
+    public ResModel findallAlarm();
+    public ResModel GetCurrentAlarmCount();
+    public List<AlarmModel> GetAlarmList(ListQueryModel listQueryModel) throws Exception;
+    public List<DeviceModel> GetDevices(String[] deviceIds);
 }
+

@@ -8,6 +8,10 @@ package cn.zh.zhbackend.canseeguan.service;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.domain.TagMappingModel;
+
+import java.util.Map;
+
 /**
  * @program: zhbackend
  *
@@ -17,6 +21,8 @@ package cn.zh.zhbackend.canseeguan.service;/**
  *
  * @create: 2019-10-15 08:38
  **/
-public class DataModule {
-    
+public class DataService {
+    public static TagMappingModel[] tagMappingModels;
+
+    public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
 }

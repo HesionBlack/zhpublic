@@ -1,18 +1,19 @@
-package cn.zh.zhbackend.canSeeGuan.dao;
+package cn.zh.zhbackend.canseeguan.dao;
 
 
-import cn.zh.zhbackend.canSeeGuan.Utils.AESUtil;
-import cn.zh.zhbackend.canSeeGuan.domain.ResModel;
-import cn.zh.zhbackend.canSeeGuan.domain.User;
+import cn.zh.zhbackend.canseeguan.Utils.AESUtil;
+import cn.zh.zhbackend.canseeguan.domain.ResModel;
+import cn.zh.zhbackend.canseeguan.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Component
 public class UserDao {
     @Autowired
     private MongoTemplate mongoTemplate;
@@ -24,8 +25,8 @@ public class UserDao {
         Query query = new Query();
         query.addCriteria(
                 new Criteria().andOperator(
-                          Criteria.where("userId").is(user.getUserId())
-
+                          Criteria.where("userId").is(user.getUserId()),
+                          Criteria.where("userPw").is(pwd)
                 ));
         List<User> users = mongoTemplate.find(query,User.class);
         System.out.println(user);
