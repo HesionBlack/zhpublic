@@ -9,23 +9,15 @@ package cn.zh.zhbackend.canseeguan.dao;/**
  */
 
 import cn.zh.zhbackend.canseeguan.domain.*;
-import com.oracle.tools.packager.Log;
-import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.mapping.TextScore;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
-import javax.sound.midi.Soundbank;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-
-import static cn.zh.zhbackend.canseeguan.domain.WhereConditionMethod.*;
 
 /**
  * @program: zhbackend
@@ -40,7 +32,7 @@ public class AlarmDao {
 
     public ResModel findallAlarm() {
         ResModel resModel = new ResModel();
-        List<alarm> alarmRawModelList = mongoTemplate.findAll(alarm.class);
+        List<Alarm> alarmRawModelList = mongoTemplate.findAll(Alarm.class);
         System.out.println(alarmRawModelList);
         resModel.setData(alarmRawModelList);
         return resModel;
@@ -52,7 +44,7 @@ public class AlarmDao {
         //构造查询语句
         Query query = new Query(Criteria.where("AlarmState").is("1"));
         //传入mongoTemplate中进行查询
-        List<alarm> alarmRawModelList = mongoTemplate.find(query, alarm.class);
+        List<Alarm> alarmRawModelList = mongoTemplate.find(query, Alarm.class);
         System.out.println("getCurrentAlarmCount:" + alarmRawModelList);
         int size = alarmRawModelList.size();
         System.out.println("getCurrentAlarmCount_list:" + size);
@@ -61,9 +53,9 @@ public class AlarmDao {
         return resModel;
     }
 
-    public List<alarm> GetAlarmList(ListQueryModel listQueryModel) {
+    public List<Alarm> GetAlarmList(ListQueryModel listQueryModel) {
         ResModel resModel = new ResModel();
-        List<alarm> alarmRawModelList = null;
+        List<Alarm> alarmRawModelList = null;
         //从请求的数据中抽取只需要获取一次的数据
         WhereCondition[] whereConditions = listQueryModel.getWhereConditions();
         OrderCondition[] orderConditions = listQueryModel.getOrderConditions();
@@ -75,20 +67,20 @@ public class AlarmDao {
             //查看请求数据中的查询条件
             for (int i = 0; i < whereConditions.length; i++) {
                 System.out.println("GetAlarmList_whereConditions:" + whereConditions[i]);
-                String field = whereConditions[i].getField();
+                Object field = whereConditions[i].getField();
                 System.out.println("GetAlarmList_field："+field);
-                if (!field.isEmpty()) {
+                if (!"null".equals(field)) {
                     switch (whereConditions[i].getMethod()) {
                         //进行IN查询
                         case IN:
                             System.out.println("已经进入IN");
                             Query query = new Query();
-                            String[] condiValue = whereConditions[i].getValue();
-                            System.out.println("whereConditions[i].getValue()："+condiValue[0]);
+                            ArrayList<String> arrayList= (ArrayList<String>) whereConditions[i].getValue();
+                            String[] condiValue = arrayList.toArray(new String[2]);
                             query.addCriteria(
                                     new Criteria().orOperator(
-                                            Criteria.where(field).in(condiValue[0]),
-                                            Criteria.where(field).in(condiValue[1])
+                                            Criteria.where(field.toString()).in(condiValue[0]),
+                                            Criteria.where(field.toString()).in(condiValue[1])
                                     ));
                             //查看请求数据中的排序条件
                             if (orderConditions != null && orderConditions.length > 0) {
@@ -98,16 +90,16 @@ public class AlarmDao {
                                     if (method == OrderConditionMethod.ASC) {
                                         //升序
                                         query.with(Sort.by(
-                                                Sort.Order.asc(field))).skip(pageIndex * pageItemCount).limit(pageItemCount);
+                                                Sort.Order.asc(field.toString()))).skip(pageIndex * pageItemCount).limit(pageItemCount);
                                     } else {
                                         // 降序
                                         query.with(Sort.by(
-                                                Sort.Order.desc(field))).skip(pageIndex * pageItemCount).limit(pageItemCount);
+                                                Sort.Order.desc(field.toString()))).skip(pageIndex * pageItemCount).limit(pageItemCount);
                                     }
                                 }
                             }
                             System.out.println("开始查询");
-                            alarmRawModelList = mongoTemplate.find(query, alarm.class);
+                            alarmRawModelList = mongoTemplate.find(query, Alarm.class);
                             System.out.println("GetAlarmList_IN：" + alarmRawModelList);
 //                            resModel.setData(alarmRawModelList);
 //                            System.out.println("GetAlarmList_IN：" + resModel);
@@ -140,8 +132,10 @@ public class AlarmDao {
     }
 
 
-    public List<tag> GetDevices() {
-//        Query query = new Query(Criteria.where("tagId").is(tags));
-        return mongoTemplate.findAll(tag.class);
+    public List<Tag> GetTagData() {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("tagId").regex("t_|h_"));
+//        query.with(new Sort(Sort.Direction.ASC,"tagId"));
+        return mongoTemplate.find(query, Tag.class);
     }
 }

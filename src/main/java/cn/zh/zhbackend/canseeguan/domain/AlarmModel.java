@@ -4,8 +4,6 @@ import cn.zh.zhbackend.canseeguan.Utils.ConvertLongToDateTime;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
-
 @Data
 @ToString(callSuper = true)
 public class AlarmModel extends  TagMappingModel
@@ -14,9 +12,9 @@ public class AlarmModel extends  TagMappingModel
         public String eventTime ;
         public String state ;
         public int priority ;
-        public alarm rawData ;
+        public Alarm rawData ;
 
-        public AlarmModel(alarm rawData, TagMappingModel tagMapping)
+        public AlarmModel(Alarm rawData, TagMappingModel tagMapping)
         {
                 this.rawData = rawData;
                 this.title = tagMapping.tagName + "（报警类型：" + rawData.AlarmType + " , "

@@ -9,7 +9,9 @@ package cn.zh.zhbackend.canseeguan.controller;/**
  */
 
 import cn.zh.zhbackend.canseeguan.domain.*;
+import cn.zh.zhbackend.canseeguan.service.ICellEventService;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
+import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,6 +35,8 @@ public class DataController {
 
     @Autowired
     private AlarmEventServiceImpl alarmEventService;
+    @Autowired
+    private CellEventServiceImpl cellEventService;
     ResModel resModel = new ResModel();
     Map<String,Object> map = new HashMap<>();
     //获取当前报警数量
@@ -88,4 +92,25 @@ public class DataController {
         map.put("data",deviceModels);
         return map;
     }
+    @PostMapping("/data/getCellSummary")
+    public Map GetCellSummary(@RequestBody CabinetModel cabinetModel){
+        List<CabinetModel> cabinetModels = cellEventService.GetCellSummary(cabinetModel);
+        map.put("code",200);
+        map.put("isSuccess",true);
+        map.put("message","成功获取数据.");
+        map.put("data",cabinetModels);
+        return map;
+    }
+
+        @PostMapping("/data/getCellBoxes")
+        public Map getCellBoxes(@RequestBody CellModel cellModel ) throws Exception {
+
+            List<BoxModel> boxModels = cellEventService.getCellBoxes(cellModel);
+            map.put("code",200);
+            map.put("isSuccess",true);
+            map.put("message","成功获取数据.");
+            map.put("data",boxModels);
+            return map;
+        }
+
 }

@@ -22,7 +22,6 @@ import lombok.ToString;
  * @create: 2019-10-11 16:41
  **/
 @Data
-@ToString(callSuper = true)
 public class ListQueryModel {
     public int pageIndex;
     public int pageItemCount;

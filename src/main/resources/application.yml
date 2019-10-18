@@ -4,8 +4,21 @@ spring:
   data:
     mongodb:
       uri: mongodb://192.168.0.51:27017/cyberArchive
-      connections-per-host: 20
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/thams?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 580699
 #spring:
 #  data:
 #    mongodb:
 #      uri: mongodb://192.168.0.51:27017/cyberArchive
+logging:
+  level:
+    cn:
+      zh:
+        zhbackend:
+          canseeguan:
+            dao: debug
+mybatis:
+  config-location: classpath:mybatis-config.xml

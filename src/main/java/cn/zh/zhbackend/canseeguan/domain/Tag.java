@@ -6,7 +6,7 @@ import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.types.ObjectId;
 
 @Data
-public class tag {
+public class Tag {
     @BsonId
     public ObjectId _id;
     public String tagId;//变量Id

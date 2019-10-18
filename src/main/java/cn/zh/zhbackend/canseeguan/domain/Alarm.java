@@ -6,7 +6,7 @@ import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
 
 @Data
-public class alarm {
+public class Alarm {
     @BsonId
     public ObjectId _id;
     public String SerialNo;// 序列号

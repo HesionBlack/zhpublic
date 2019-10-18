@@ -9,8 +9,10 @@ package cn.zh.zhbackend.canseeguan.service;/**
  */
 
 import cn.zh.zhbackend.canseeguan.Utils.readExcel;
+import cn.zh.zhbackend.canseeguan.domain.CellMappingModel;
 import cn.zh.zhbackend.canseeguan.domain.TagMappingModel;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
+import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
@@ -30,13 +32,26 @@ import java.util.Map;
 public class DataModule {
 
 
-    public static Map<String,Object> InitCellMapping(){
+    public static Map<String,Object> initTagMapping(){
         readExcel readExcel = new readExcel();
         String outmsg="";
         Map<String,Object> outdata = new HashMap<>();
         try {
             Map<Integer, TagMappingModel> integerTagMappingModelMap = readExcel.TagMappingread("TagMapping.xlsx");
             AlarmEventServiceImpl.dicTagDeviceMapping = integerTagMappingModelMap;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return outdata;
+    }
+
+    public static Map<String,Object> initCellMapping(){
+        readExcel readExcel = new readExcel();
+        String outmsg="";
+        Map<String,Object> outdata = new HashMap<>();
+        try {
+            Map<Integer, CellMappingModel> CellMappingModelMap = readExcel.CellMappingread("CellMapping.xlsx");
+            CellEventServiceImpl.dicCellMapping = CellMappingModelMap;
         } catch (Exception e) {
             e.printStackTrace();
         }

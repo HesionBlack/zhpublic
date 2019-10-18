@@ -74,7 +74,7 @@ public class readExcel {
             while (rowIterator.hasNext()) {
                 System.out.println("第j:" + j + "次循环开始");
                 //跳过前四行
-                if (j < 5) {
+                if (j <= 3) {
                     System.out.println("该行已经跳过");
                     j++;
                     //读取一列
@@ -99,8 +99,6 @@ public class readExcel {
                     //定义一个存放数据的变量
                     String cellValue = "";
 
-                    System.out.println("第i:" + i + "次循环开始");
-
                     //判断单元格数据类型
                     switch ((cell.getCellType())) {
                         case STRING:
@@ -124,8 +122,6 @@ public class readExcel {
                         default:
                     }
 
-                    //打印数据
-                    System.out.println("CellNum:" + i + " => CellValue:" + cellValue);
 
                     switch (i) {
                         case 0:
@@ -168,6 +164,7 @@ public class readExcel {
                 j++;
 
             }
+            System.out.println("tagMapping:数据已经导入成功过");
             return map;
         } finally {
             if (inputStream != null) {
@@ -196,9 +193,8 @@ public class readExcel {
             Map<Integer,CellMappingModel> map = new HashMap<>();
             //循环迭代开始
             while (rowIterator.hasNext()) {
-                System.out.println("第j:" + j + "次循环开始");
                 //跳过前四行
-                if (j < 5) {
+                if (j <= 3) {
                     System.out.println("该行已经跳过");
                     j++;
                     //读取一列
@@ -223,7 +219,6 @@ public class readExcel {
                     //定义一个存放数据的变量
                     String cellValue = "";
 
-                    System.out.println("第i:" + i + "次循环开始");
 
                     //判断单元格数据类型
                     switch ((cell.getCellType())) {
@@ -249,7 +244,6 @@ public class readExcel {
                     }
 
                     //打印数据
-                    System.out.println("CellNum:" + i + " => CellValue:" + cellValue);
 
                     switch (i) {
                         case 0:
@@ -283,10 +277,10 @@ public class readExcel {
                     }
                 }
                 map.put(j,cellMappingModel);
-                System.out.println(" map:"+map.get(j));
                 j++;
 
             }
+            System.out.println("CellMapping:数据已经导入成功过");
             return map;
         } finally {
             if (inputStream != null) {
