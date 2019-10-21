@@ -18,6 +18,8 @@ import java.util.Map;
  */
 @Mapper
 public interface CellsqlDao {
+
+
     @Select(value = "select * from f_box where f_box.position like '${cell.cellMapString}%'")
     //@Select("SELECT id,boxcode,position,backwidth From f_box WHERE position LIKE CONCAT(#{pos.cellMapString},'%')")
 //    @Results(id="BoxMap", value={
@@ -60,4 +62,16 @@ public interface CellsqlDao {
     public List<Map<String, Object>> getQueryDocuments(String queryString, int pageIndex, int pageItemCount, int itemStart);
     @Select("SELECT * From f_box WHERE id IN(${quertString})")
     public List<Map<String,Object>>  getBoxInfoById(String quertString);
+
+
+    @Select("select SQL_CALC_FOUND_ROWS *,substring_index(`position`, '-', 1) cellMapString "
+            + "from f_box where fondsid like '%${queryString}%' "
+            +"or boxcode like '%${queryString}%'"
+            +"or classfy like '%${queryString}%'"
+            +"or classfyname like '%${queryString}%'"
+            +"or memo like '%${queryString}%'"
+            +"or department like '%${queryString}%'"
+            +"limit #{pageIndex},#{pageItemCount}"
+    )
+    List<Map<String,Object>> getQueryBoxesInfo(String queryString, int pageIndex, int pageItemCount, int itemStart);
 }

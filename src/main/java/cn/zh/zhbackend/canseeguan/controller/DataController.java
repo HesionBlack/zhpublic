@@ -144,4 +144,23 @@ public class DataController {
         map.put("data", pagedDataModel);
         return map;
     }
+
+    //获取条件查询档案盒信息
+    @PostMapping("/data/getQueryBoxes/")
+    public Map getQueryBoxes(@RequestBody ListQueryModel query) throws Exception{
+        PagedDataModel pagedDataModel = new PagedDataModel();
+        map.put("code", 200);
+        map.put("isSuccess", true);
+        map.put("message", "成功获取数据.");
+        //数据获取
+        List<BoxModel> queryBoxes = cellEventService.getQueryBoxes(query);
+        pagedDataModel.setTotalCount(queryBoxes.size());
+        pagedDataModel.setData(queryBoxes);
+
+        map.put("data", pagedDataModel);
+        return map;
+
+    }
 }
+
+

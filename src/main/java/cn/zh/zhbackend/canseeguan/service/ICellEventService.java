@@ -18,4 +18,6 @@ public interface ICellEventService {
     public List<BoxModel> getCellBoxes(CellModel cellModel) throws Exception;
 
     public List<DocumentModel> getQueryDocuments(ListQueryModel query);
+
+    List<BoxModel> getQueryBoxes(ListQueryModel query);
 }

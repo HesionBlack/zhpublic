@@ -122,6 +122,7 @@ public class CellEventServiceImpl implements ICellEventService {
         List<DocumentModel> documents = new ArrayList<>(2);
         BoxModelS boxModelS = new BoxModelS();
         if(query.whereConditions.length > 0){
+            //遍历whereCondition数组 取出变量值
             for (WhereCondition whereCondition:
                  query.whereConditions) {
                 if(!(null==whereCondition.field)){
@@ -129,9 +130,11 @@ public class CellEventServiceImpl implements ICellEventService {
                 }
             }
             int itemStart = query.pageIndex*query.pageItemCount;
+            //数据库查询
             List<Map<String, Object>> queryDocuments = cellsqlDao.getQueryDocuments(queryString, query.pageIndex, query.pageItemCount, itemStart);
             System.out.println(queryDocuments);
             List<String> boxIds = new ArrayList<>(3);
+            //遍历结果集
             for (int i = 0; i < queryDocuments.size(); i++) {
                 DocumentModel document = new DocumentModel();
                 Map<String, Object> map = queryDocuments.get(i);
@@ -143,14 +146,17 @@ public class CellEventServiceImpl implements ICellEventService {
                 boxIds.add(boxid.toString());
             }
             System.out.println(boxIds);
+            //用于存放盒的相关信息
             List<BoxModel> boxList = new ArrayList<>();
             if(boxIds.size()>0){
+                //拼接SQL语句的条件
                 String sql ="";
                 for (int i = 0; i < boxIds.size(); i++) {
                     sql=sql+boxIds.get(i)+",";
                 }
                 String sqlSub = sql.substring(0, sql.length() - 1);
                 System.out.println("sql:"+sql+"sqlSub:"+sqlSub);
+                //通过盒子的id向数据库查询
                 List<Map<String, Object>> boxInfoById = cellsqlDao.getBoxInfoById(sqlSub);
                 System.out.println("boxInfoById:"+boxInfoById);
 
@@ -216,6 +222,63 @@ public class CellEventServiceImpl implements ICellEventService {
 
         return documents;
     }
+
+    @Override
+    public List<BoxModel> getQueryBoxes(ListQueryModel query) {
+        String queryString="";
+        //创建一个列表 存放盒子对象
+        List<BoxModel> boxModels = new ArrayList<>(2);
+        //从传入的参数中 提取相关信息
+        //判断whereCondition是否为空
+        if(query.whereConditions.length > 0 ){
+            //从whereCondition中遍历出whereCondition
+            for (WhereCondition whereCondition : query.whereConditions) {
+                //判断field是否为空
+                if (!(null == whereCondition.field)) {
+                    //不为空则提取出值
+                    queryString = whereCondition.value.toString();
+                }
+                int itemStart = query.pageIndex*query.pageItemCount;
+                //提取出来的条件 传入数据访问层  从数据库查询数据
+                List<Map<String, Object>> queryBoxesInfo = cellsqlDao.getQueryBoxesInfo(queryString, query.pageIndex, query.pageItemCount, itemStart);
+                List<String> keyList = new ArrayList<>();
+                //遍历结果集
+                for (int i = 0; i < queryBoxesInfo.size(); i++) {
+                    BoxModel boxModel = new BoxModel();
+                    //获取List中的Map
+                    Map<String, Object> map = queryBoxesInfo.get(i);
+                    boxModel.boxInfo=map;
+                    boxModel.boxName = String.valueOf(map.get("boxcode"));
+                    Integer id = ((Number) map.get("id")).intValue();
+                    String boxId = id.toString();
+                    boxModel.boxId = boxId;
+                    boxModels.add(boxModel);
+                    String position = map.get("position").toString();
+                    keyList.add(position.substring(0,position.length()-2));
+                }
+                //需要将查到的数据对应Excel表中的数据获取相关Box的相关信息
+                for (int i = 0; i < boxModels.size(); i++) {
+                    BoxModel boxModel = boxModels.get(i);
+                    DataService.dicCellMapping.forEach((key,value)-> {
+                        for (int j = 0; j < keyList.size(); j++) {
+                            String s = keyList.get(j);
+                            if(s.equals(value.cellMapString)){
+                                boxModel.buildingId = value.buildingId;
+                                boxModel.floorId = value.floorId;
+                                boxModel.roomId = value.roomId;
+                                boxModel.cabinetId = value.cabinetId;
+                                boxModel.cellId = value.cellId;
+                            }
+                        }
+                    });
+                }
+
+            }
+            //
+        }
+        return boxModels;
+    }
+
 
     private double toTransfer(String thick) {
         Double dThick = Double.valueOf(thick.replace("m", "").trim());
