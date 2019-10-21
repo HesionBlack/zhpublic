@@ -21,35 +21,38 @@ public class userController {
 
     @Autowired
     private IUserService userService;
-    Map<String,Object> map = new HashMap<>();
+    Map<String, Object> map = new HashMap<>();
+
+    //登录
     @PostMapping("/user/login")
-    public Map<String,Object> login(HttpServletResponse response, @RequestBody User user) throws Exception {
+    public Map<String, Object> login(HttpServletResponse response, @RequestBody User user) throws Exception {
         System.out.println(user);
         ResModel login = userService.login(user);
 
-        if (login.getCode()==200){
+        if (login.getCode() == 200) {
             String token = JwtUtil.generateToken(user.getUserName());
-            response.addHeader("Set-Authorization-Token",token);
-            response.addHeader("Access-Control-Expose-Headers","Set-Authorization-Token");
-            map.put("data",user);
-            map.put("isSuccess",true);
+            response.addHeader("Set-Authorization-Token", token);
+            response.addHeader("Access-Control-Expose-Headers", "Set-Authorization-Token");
+            map.put("data", user);
+            map.put("isSuccess", true);
             return map;
 //            return AjaxResponse.success(user);
         }
-        map.put("isSuccess",false);
+        map.put("isSuccess", false);
         return map;
     }
+    //查询所有用户
     @PostMapping("/zh/findall")
     public List<User> findAll() {
         return userService.findAll();
     }
 
-
+    //添加用户 //未实现
     @PostMapping("/user/add")
     public AjaxResponse Add(@RequestBody User user) throws Exception {
         System.out.println(user);
         ResModel login = userService.add(user);
-        if (login.getCode()==200){
+        if (login.getCode() == 200) {
             return AjaxResponse.success(user);
 
         }

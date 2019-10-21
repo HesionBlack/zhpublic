@@ -11,6 +11,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
 import cn.zh.zhbackend.canseeguan.dao.CellsqlDao;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.DataModule;
+import cn.zh.zhbackend.canseeguan.service.DataService;
 import cn.zh.zhbackend.canseeguan.service.ICellEventService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -34,12 +35,12 @@ public class CellEventServiceImpl implements ICellEventService {
     @Autowired
     private CellsqlDao cellsqlDao;
 
-    public static Map<Integer, CellMappingModel> dicCellMapping;
+
 
     @Override
     public List<CabinetModel> GetCellSummary(CabinetModel cabinetModel) {
         List<CabinetModel> cabinetModels = new ArrayList<>();
-        dicCellMapping.forEach(((key, value) -> {
+        DataService.dicCellMapping.forEach(((key, value) -> {
             System.out.println("dicCellMapping:" + value);
             if (cabinetModel.buildingId.equals(value.buildingId)
                     && cabinetModel.floorId.equals(value.floorId)
@@ -56,8 +57,8 @@ public class CellEventServiceImpl implements ICellEventService {
     public List<BoxModel> getCellBoxes(CellModel cellModel) throws Exception {
         List<BoxModel> boxModelsList = new ArrayList<>();
         List<CellMappingModel> cellMappingModels = new ArrayList<>();
-        if (null != dicCellMapping) {
-            CellEventServiceImpl.dicCellMapping.forEach((key, value) -> {
+        if (null != DataService.dicCellMapping) {
+            DataService.dicCellMapping.forEach((key, value) -> {
                 if (value.buildingId.equals(cellModel.buildingId)
                         && value.floorId.equals(cellModel.floorId)
                         && value.roomId.equals(cellModel.roomId)
@@ -89,7 +90,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     boxModel.buildingId = cellModel.buildingId;
                     boxModel.floorId = cellModel.floorId;
                     boxModel.roomId = cellModel.roomId;
-                    boxModel.cabinetId = cellModel.cabinetId;
+//                    boxModel.cabinetId = cellModel.cabinetId;
                     boxModel.index = -1;
                     boxModel.thick = 0.05d;
                     boxModel.cellId = cellModel.cellId;
@@ -115,12 +116,112 @@ public class CellEventServiceImpl implements ICellEventService {
         return boxModelsList;
     }
 
+    @Override
+    public List<DocumentModel> getQueryDocuments(ListQueryModel query) {
+        String queryString="";
+        List<DocumentModel> documents = new ArrayList<>(2);
+        BoxModelS boxModelS = new BoxModelS();
+        if(query.whereConditions.length > 0){
+            for (WhereCondition whereCondition:
+                 query.whereConditions) {
+                if(!(null==whereCondition.field)){
+                    queryString=whereCondition.value.toString();
+                }
+            }
+            int itemStart = query.pageIndex*query.pageItemCount;
+            List<Map<String, Object>> queryDocuments = cellsqlDao.getQueryDocuments(queryString, query.pageIndex, query.pageItemCount, itemStart);
+            System.out.println(queryDocuments);
+            List<String> boxIds = new ArrayList<>(3);
+            for (int i = 0; i < queryDocuments.size(); i++) {
+                DocumentModel document = new DocumentModel();
+                Map<String, Object> map = queryDocuments.get(i);
+                Integer id = ((Number) map.get("id")).intValue();
+                document.documentId= id.toString();
+                document.docInfo = map;
+                documents.add(document);
+                Integer boxid = ((Number) map.get("boxid")).intValue();
+                boxIds.add(boxid.toString());
+            }
+            System.out.println(boxIds);
+            List<BoxModel> boxList = new ArrayList<>();
+            if(boxIds.size()>0){
+                String sql ="";
+                for (int i = 0; i < boxIds.size(); i++) {
+                    sql=sql+boxIds.get(i)+",";
+                }
+                String sqlSub = sql.substring(0, sql.length() - 1);
+                System.out.println("sql:"+sql+"sqlSub:"+sqlSub);
+                List<Map<String, Object>> boxInfoById = cellsqlDao.getBoxInfoById(sqlSub);
+                System.out.println("boxInfoById:"+boxInfoById);
+
+                for (int i = 0; i < boxInfoById.size(); i++) {
+
+                    CellMappingModel cellMapping =null;
+                    Map<String, Object> map = boxInfoById.get(i);
+                    String position = (String) map.get("position");
+                    String posSub = position.substring(0, position.length() - 2);
+                    Map<Integer, CellMappingModel> dicCellMapping = DataService.dicCellMapping;
+                    for (int j = 0; j < dicCellMapping.size(); j++) {
+                        CellMappingModel cellMappingModel = dicCellMapping.get(j);
+                        if(cellMappingModel != null){
+                            if(cellMappingModel.cellMapString.equals(posSub)){
+                                cellMapping = cellMappingModel;
+                            }
+                        }
+                    }
+                    if(null != cellMapping ){
+                        BoxModel box = new BoxModel();
+
+                        box.buildingId = cellMapping.buildingId;
+                        box.floorId = cellMapping.floorId;
+                        box.roomId = cellMapping.roomId;
+                        box.cabinetId = cellMapping.cabinetId;
+                        box.cellId = cellMapping.cellId;
+                        box.boxInfo=map;
+
+                        box.boxId = String.valueOf(map.get("id"));
+                        box.boxName = String.valueOf(map.get("boxcode"));
+                        box.thick = 0;
+                        if (0==box.thick){
+                            box.thick = toTransfer(map.get("backwidth").toString());
+                        }
+                        boxList.add(box);
+                    }
+
+
+                }
+                BoxModel boxModel = null;
+                for (int i = 0; i < documents.size(); i++) {
+                    for (int j = 0; j < boxList.size(); j++) {
+
+                        Integer boxid = ((Number) documents.get(i).docInfo.get("boxid")).intValue();
+                        String boxId = boxid.toString();
+                        if((boxList.get(j).boxId).equals(boxId)){
+                            boxModel = boxList.get(j);
+                        }
+                    }
+                    if(null != boxModel){
+                        documents.get(i).buildingId = boxModel.buildingId;
+                        documents.get(i).floorId = boxModel.floorId;
+                        documents.get(i).roomId = boxModel.roomId;
+                        documents.get(i).cabinetId = boxModel.cabinetId;
+                        documents.get(i).cellId = boxModel.cellId;
+                        documents.get(i).boxId = boxModel.boxId;
+                    }
+                }
+            }
+
+
+        }
+
+        return documents;
+    }
+
     private double toTransfer(String thick) {
         Double dThick = Double.valueOf(thick.replace("m", "").trim());
 //        dThick = dThick/1000.00d;
         return (double)Math.round(dThick)/1000.00d;
     }
-
     private int getBoxIndex(String position, String cellMappingString) {
         Integer index = 0;
         String p = position.replace(cellMappingString, "").replace("-", "").trim();
@@ -133,11 +234,6 @@ public class CellEventServiceImpl implements ICellEventService {
 
 
         return index;
-    }
-    @Test
-    public void testToTransfer(){
-        double v = toTransfer("52mm");
-        System.out.println(v);
     }
 
 

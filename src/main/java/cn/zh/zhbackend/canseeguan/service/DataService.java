@@ -8,6 +8,7 @@ package cn.zh.zhbackend.canseeguan.service;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.domain.CellMappingModel;
 import cn.zh.zhbackend.canseeguan.domain.TagMappingModel;
 
 import java.util.Map;
@@ -25,4 +26,5 @@ public class DataService {
     public static TagMappingModel[] tagMappingModels;
 
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
+    public static Map<Integer, CellMappingModel> dicCellMapping;
 }

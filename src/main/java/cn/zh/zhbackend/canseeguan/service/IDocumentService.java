@@ -1,4 +1,11 @@
-package cn.zh.zhbackend.canseeguan.service.Impl;
+package cn.zh.zhbackend.canseeguan.service;
+
+import cn.zh.zhbackend.canseeguan.domain.BoxModel;
+import cn.zh.zhbackend.canseeguan.domain.DocumentModel;
+import cn.zh.zhbackend.canseeguan.domain.ListQueryModel;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * ClassName: IDocumentService <br/>
@@ -8,5 +15,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;
  * @author Hesion<br />
  * @since JDK 1.8
  */
-public enum IDocumentService {
+public interface IDocumentService {
+    public Map getDocumentsByBoxId(long id, int pageIndex, int pageItemCount);
+
 }

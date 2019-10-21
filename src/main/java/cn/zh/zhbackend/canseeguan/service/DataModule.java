@@ -51,7 +51,7 @@ public class DataModule {
         Map<String,Object> outdata = new HashMap<>();
         try {
             Map<Integer, CellMappingModel> CellMappingModelMap = readExcel.CellMappingread("CellMapping.xlsx");
-            CellEventServiceImpl.dicCellMapping = CellMappingModelMap;
+            DataService.dicCellMapping = CellMappingModelMap;
         } catch (Exception e) {
             e.printStackTrace();
         }

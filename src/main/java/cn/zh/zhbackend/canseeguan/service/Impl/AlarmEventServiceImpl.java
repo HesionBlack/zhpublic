@@ -53,7 +53,9 @@ public class AlarmEventServiceImpl implements IAlarmEventService {
         for (Alarm alarm :
                 Alarms) {
             dicTagDeviceMapping.forEach((key, value) -> {
-                alarmModels.add(new AlarmModel(alarm, value));
+                if(alarm.getTagID().equals(value.tagId)) {
+                    alarmModels.add(new AlarmModel(alarm, value));
+                }
             });
         }
 

@@ -1,8 +1,6 @@
 package cn.zh.zhbackend.canseeguan.service;
 
-import cn.zh.zhbackend.canseeguan.domain.BoxModel;
-import cn.zh.zhbackend.canseeguan.domain.CabinetModel;
-import cn.zh.zhbackend.canseeguan.domain.CellModel;
+import cn.zh.zhbackend.canseeguan.domain.*;
 
 import java.util.List;
 
@@ -18,4 +16,6 @@ public interface ICellEventService {
     public List<CabinetModel> GetCellSummary(CabinetModel cabinetModel);
 
     public List<BoxModel> getCellBoxes(CellModel cellModel) throws Exception;
+
+    public List<DocumentModel> getQueryDocuments(ListQueryModel query);
 }
