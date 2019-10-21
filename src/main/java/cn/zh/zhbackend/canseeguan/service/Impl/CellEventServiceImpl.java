@@ -35,6 +35,7 @@ public class CellEventServiceImpl implements ICellEventService {
     @Autowired
     private CellsqlDao cellsqlDao;
 
+    private DataService dataService;
 
 
     @Override
@@ -277,6 +278,36 @@ public class CellEventServiceImpl implements ICellEventService {
             //
         }
         return boxModels;
+    }
+
+    @Override
+    public List<CellMappingModel> searchCellbySpace(ListQueryModel query) {
+        dataService.UpdateCellTickCache();
+        List<CellMappingModel> cellMappingModels = new ArrayList<>(0);
+        try {
+            if (query.whereConditions != null) {
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return cellMappingModels;
+    }
+
+    @Override
+    public List<CabinetModel> getCellSummaryLimitSpace(CabinetModel cabinetModel,Double space) {
+        List<CabinetModel> cabinetModels = new ArrayList<>();
+        DataService.dicCellMapping.forEach(((key, value) -> {
+            System.out.println("dicCellMapping:" + value);
+            if (cabinetModel.buildingId.equals(value.buildingId)
+                    && cabinetModel.floorId.equals(value.floorId)
+                    && cabinetModel.roomId.equals(value.roomId)
+                    && cabinetModel.cabinetId.equals(value.cabinetId)&&space <=(value.cellWidth-value.totalBoxThick)) {
+                cabinetModels.add(value);
+            }
+        }));
+        System.out.println("数据已经添加到列表中...");
+        return cabinetModels;
     }
 
 

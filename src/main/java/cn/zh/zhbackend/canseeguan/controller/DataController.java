@@ -14,10 +14,8 @@ import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.DocumentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.lang.Nullable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -87,8 +85,13 @@ public class DataController {
 
     //获取节统计数据
     @PostMapping("/data/getCellSummary")
-    public Map GetCellSummary(@RequestBody CabinetModel cabinetModel) {
-        List<CabinetModel> cabinetModels = cellEventService.GetCellSummary(cabinetModel);
+    public Map GetCellSummary(@RequestBody CabinetModel cabinetModel, @PathVariable @Nullable Double space) {
+        List<CabinetModel> cabinetModels=null;
+        if(space.isNaN()) {
+            cabinetModels = cellEventService.GetCellSummary(cabinetModel);
+        }else if (space >= 0.0d){
+            cabinetModels = cellEventService.getCellSummaryLimitSpace(cabinetModel,space);
+        }
         map.put("code", 200);
         map.put("isSuccess", true);
         map.put("message", "成功获取数据.");
@@ -160,6 +163,17 @@ public class DataController {
         map.put("data", pagedDataModel);
         return map;
 
+    }
+
+    //获取条件查询报警信息
+    @PostMapping("/data/searchCellBySpace")
+    public Map searchCellbySpace(ListQueryModel query){
+        map.put("code", 200);
+        map.put("isSuccess", true);
+        List<CellMappingModel> cellMappingModels = cellEventService.searchCellbySpace(query);
+        map.put("message", "成功获取数据.");
+        map.put("data", 2);
+        return map;
     }
 }
 

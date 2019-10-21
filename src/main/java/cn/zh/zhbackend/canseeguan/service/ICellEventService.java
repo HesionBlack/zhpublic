@@ -20,4 +20,8 @@ public interface ICellEventService {
     public List<DocumentModel> getQueryDocuments(ListQueryModel query);
 
     List<BoxModel> getQueryBoxes(ListQueryModel query);
+
+    List<CellMappingModel> searchCellbySpace(ListQueryModel query);
+
+    List<CabinetModel> getCellSummaryLimitSpace(CabinetModel cabinetModel,Double space);
 }

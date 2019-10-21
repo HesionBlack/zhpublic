@@ -74,4 +74,10 @@ public interface CellsqlDao {
             +"limit #{pageIndex},#{pageItemCount}"
     )
     List<Map<String,Object>> getQueryBoxesInfo(String queryString, int pageIndex, int pageItemCount, int itemStart);
+
+    @Select("SELECT substring_index(`position`, '-', 1) cellMapString," +
+            "count(*) totalBoxes," +
+            "round(sum(`backwidth`) / 1000 , 3) totalThick " +
+            "FROM f_box GROUP BY cellMapString")
+    List<Map<String,Object>> UpdateCellTickCache();
 }
