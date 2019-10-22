@@ -165,7 +165,8 @@ public class DataController {
 
     }
 
-    //获取条件查询报警信息
+
+    //获取查询剩余空间  //..
     @PostMapping("/data/searchCellBySpace")
     public Map searchCellbySpace(ListQueryModel query){
         map.put("code", 200);
@@ -175,6 +176,18 @@ public class DataController {
         map.put("data", 2);
         return map;
     }
+
+    //..
+    //获取测试报警信息
+    @PostMapping("/data/getTestAlarm")
+    public Map getTestAlarms(){
+        map.put("code", 200);
+        List<TestAlarmModel> testAlarms = AlarmEventServiceImpl.getTestAlarms();
+        map.put("data",testAlarms);
+        map.put("message", "成功获取数据.");
+        return map;
+    }
+
 }
 
 

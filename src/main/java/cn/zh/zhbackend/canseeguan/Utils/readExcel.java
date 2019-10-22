@@ -48,7 +48,7 @@ public class readExcel {
         cell.setCellValue(1);
         row.createCell(1).setCellValue(1.2);
         row.createCell(2).setCellValue(
-                createHelper.createRichTextString("This is a string"));
+                createHelper.createRichTextString("This is a String"));
         row.createCell(3).setCellValue(true);
         wb.write(fileOut);
         fileOut.close();
@@ -308,7 +308,7 @@ public class readExcel {
                 Cell cell = r.getCell(i);
                 String cellValue = "";
                 switch (cell.getCellType()) {
-                    case Cell.CELL_TYPE_STRING:
+                    case Cell.CELL_TYPE_String:
                         cellValue = cell.getRichStringCellValue().getString();
                         break;
                     case Cell.CELL_TYPE_NUMERIC:

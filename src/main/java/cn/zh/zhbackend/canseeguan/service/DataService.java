@@ -33,9 +33,11 @@ public class DataService {
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
     public static Map<Integer, CellMappingModel> dicCellMapping;
     public  void UpdateCellTickCache() {
+        //查询数据库
         List<Map<String, Object>> maps = cellsqlDao.UpdateCellTickCache();
         String keyString="";
         try {
+            //遍历结果集
             for (int i = 0; i < maps.size(); i++) {
                 Map<String, Object> map = maps.get(i);
                 String cellMapString = map.get("cellMapString").toString();
@@ -45,6 +47,7 @@ public class DataService {
 
                     dicCellMapping.forEach((key, value) -> {
                         if (value.cellMapString.equals(cellMapString)) {
+                            //匹配上CellMaping Excel表中数据的格子，对两个属性赋值
                             value.totalBoxThick = totalThick.isEmpty() ? 0d : Double.valueOf(totalThick);
                             value.totalBoxCount = totalBoxes;
                         }
