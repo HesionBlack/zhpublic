@@ -58,4 +58,67 @@ public class userController {
         }
         return AjaxResponse.fail();
     }
+
+
+    /**
+     * 添加用户
+     *
+     * @param user
+     * @return
+     */
+    @PostMapping("/user/addUser")
+    public AjaxResponse addUser(@RequestBody User user ,HttpServletResponse response) throws Exception {
+        String token = userService.getToken(user.userId);
+        response.setHeader("authorization", token);
+        response.setHeader("Access-Control-Expose-Headers", "authorization");
+        User user1 = new User();
+        user1.setUserId(user.getUserId());
+
+        String pwd = AESUtils.AESEncrypt(user.getUserPw(), KEY);
+        user1.setUserPw(pwd);
+
+        if (userService.findByUserId(user.getUserId()) != null) {
+            System.out.println("用户名重复,请重新输入用户名！！");
+
+            return AjaxResponse.fail();
+        } else {
+            userService.addUser(user1);
+        }
+
+        return AjaxResponse.success(user1);
+    }
+
+    /**
+     * 修改密码
+     * @param user
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @PostMapping(value = "/user/changePassword", produces = "application/json")
+    public Map<String, Object> updateUser(@RequestBody User user, HttpServletResponse response) throws Exception {
+        String token = userService.getToken(user.userId);
+        System.out.println("cs:" + user);
+        //设置请求头
+        response.setHeader("authorization", token);
+        response.setHeader("Access-Control-Expose-Headers", "authorization");
+        String newPwd = AESUtils.AESEncrypt(user.getUserPwNew(), KEY);
+        //判断当前用户输入的旧密码是否与数据库中该用户的密码一致
+        if (AESUtils.AESEncrypt(user.getUserPw(), KEY).equals(userService.findByUserId(user.getUserId()).getUserPw())) {
+            user.setUserPwNew(newPwd);
+            System.out.println("new:" + user);
+            userService.updateUser(user);
+            result.put("isSuccess", true);
+            result.put("message", "修改成功");
+            result.put("code", 200);
+            result.put("data", user);
+            return result;
+        }
+        result.put("isSuccess", false);
+        result.put("message", "旧密码不正确，修改失败");
+        result.put("code", 500);
+        return result;
+    }
+
+
 }
