@@ -8,6 +8,10 @@ package cn.zh.zhbackend.canseeguan.Config;/**
  * @since JDK 1.8
  */
 
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * @program: zhbackend
  *
@@ -17,5 +21,9 @@ package cn.zh.zhbackend.canseeguan.Config;/**
  *
  * @create: 2019-10-23 09:44
  **/
-public class ymlConfig {
+@Data
+@Component
+public class YmlConfig {
+    @Value("${pdfRootPath}")
+    private String pdfRootPath;
 }

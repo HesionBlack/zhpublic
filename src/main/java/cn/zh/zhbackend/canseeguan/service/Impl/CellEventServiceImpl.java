@@ -8,6 +8,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Utils.StringUtils;
 import cn.zh.zhbackend.canseeguan.dao.CellsqlDao;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.DataModule;
@@ -139,8 +140,7 @@ public class CellEventServiceImpl implements ICellEventService {
             for (int i = 0; i < queryDocuments.size(); i++) {
                 DocumentModel document = new DocumentModel();
                 Map<String, Object> map = queryDocuments.get(i);
-                Integer id = ((Number) map.get("id")).intValue();
-                document.documentId= id.toString();
+                document.documentId= StringUtils.longToString(map.get("id"));
                 document.docInfo = map;
                 documents.add(document);
                 Integer boxid = ((Number) map.get("boxid")).intValue();

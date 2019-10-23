@@ -22,3 +22,6 @@ logging:
             dao: debug
 mybatis:
   config-location: classpath:mybatis-config.xml
+
+##pdf文件根目录
+pdfRootPath: /Users/mac/Desktop

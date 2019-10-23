@@ -8,15 +8,20 @@ package cn.zh.zhbackend.canseeguan.controller;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.ICellEventService;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.DocumentServiceImpl;
+import cn.zh.zhbackend.canseeguan.service.Impl.FileServiceImpl;
+import org.apache.poi.hssf.record.DVALRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,8 +41,13 @@ public class DataController {
     private CellEventServiceImpl cellEventService;
     @Autowired
     private DocumentServiceImpl documentService;
+    @Autowired
+    private FileServiceImpl fileService;
+    @Autowired
+    private YmlConfig ymlConfig;
     ResModel resModel = new ResModel();
     Map<String, Object> map = new HashMap<>();
+
     @PostMapping("/data/getAll")
     public ResModel getAll() {
         return alarmEventService.findallAlarm();
@@ -57,7 +67,9 @@ public class DataController {
         return map;
     }
 
-    //获取报警设备信息
+    /*
+    获取报警设备信息
+     */
     @PostMapping("/data/getQueryAlarms")
     public Map getQueryAlarms(@RequestBody ListQueryModel listQueryModel) throws Exception {
         PagedDataModel pagedDataModel = new PagedDataModel();
@@ -72,7 +84,9 @@ public class DataController {
         return map;
     }
 
-    //获取设备信息
+    /*
+    获取设备信息
+     */
     @PostMapping("/data/getEqpData")
     public Map getEqpData(@RequestBody String[] deviceIds) {
         List<DeviceModel> deviceModels = alarmEventService.GetDevices(deviceIds);
@@ -83,14 +97,16 @@ public class DataController {
         return map;
     }
 
-    //获取节统计数据
+    /*
+    获取节统计数据
+     */
     @PostMapping("/data/getCellSummary")
     public Map GetCellSummary(@RequestBody CabinetModel cabinetModel, @PathVariable @Nullable Double space) {
-        List<CabinetModel> cabinetModels=null;
-        if(space.isNaN()) {
+        List<CabinetModel> cabinetModels = null;
+        if (space == null) {
             cabinetModels = cellEventService.GetCellSummary(cabinetModel);
-        }else if (space >= 0.0d){
-            cabinetModels = cellEventService.getCellSummaryLimitSpace(cabinetModel,space);
+        } else if (space >= 0.0d) {
+            cabinetModels = cellEventService.getCellSummaryLimitSpace(cabinetModel, space);
         }
         map.put("code", 200);
         map.put("isSuccess", true);
@@ -99,7 +115,9 @@ public class DataController {
         return map;
     }
 
-    //获取节全部BOX信息
+    /*
+    获取节全部BOX信息
+     */
     @PostMapping("/data/getCellBoxes")
     public Map getCellBoxes(@RequestBody CellModel cellModel) throws Exception {
 
@@ -111,11 +129,14 @@ public class DataController {
         return map;
     }
 
-    //获取盒全部文档信息
+    /*
+    获取盒全部文档信息
+     */
     @PostMapping("/data/getBoxDocuments")
     public Map getDocumentsbyBoxId(@RequestBody ListQueryModel query) throws Exception {
-
+        PagedDataModel pagedDataModel = new PagedDataModel();
         map.put("code", 200);
+        List<DocumentModel> documentsByBoxId = null;
         long boxId = 0;
         if (query.whereConditions.length > 0) {
             for (WhereCondition whereCondition :
@@ -124,18 +145,23 @@ public class DataController {
                     boxId = Long.parseLong(whereCondition.value.toString());
                 }
             }
-            documentService.getDocumentsByBoxId(boxId, query.pageIndex, query.pageItemCount);
+
+            documentsByBoxId = documentService.getDocumentsByBoxId(boxId, query.pageIndex, query.pageItemCount);
         }
 
         map.put("isSuccess", true);
         map.put("message", "成功获取数据.");
-        map.put("data", 2);
+        pagedDataModel.setTotalCount(documentsByBoxId.size());
+        pagedDataModel.setData(documentsByBoxId);
+        map.put("data", pagedDataModel);
         return map;
     }
 
-    //获取查询文档信息
+    /*
+    获取查询文档信息
+     */
     @PostMapping("/data/getQueryDocuments")
-    public Map getQueryDocuments(@RequestBody ListQueryModel query) throws  Exception{
+    public Map getQueryDocuments(@RequestBody ListQueryModel query) throws Exception {
         PagedDataModel pagedDataModel = new PagedDataModel();
         map.put("code", 200);
         map.put("isSuccess", true);
@@ -148,9 +174,12 @@ public class DataController {
         return map;
     }
 
-    //获取条件查询档案盒信息
+    /*
+    获取条件查询档案盒信息
+    @return
+     */
     @PostMapping("/data/getQueryBoxes/")
-    public Map getQueryBoxes(@RequestBody ListQueryModel query) throws Exception{
+    public Map getQueryBoxes(@RequestBody ListQueryModel query) throws Exception {
         PagedDataModel pagedDataModel = new PagedDataModel();
         map.put("code", 200);
         map.put("isSuccess", true);
@@ -162,13 +191,15 @@ public class DataController {
 
         map.put("data", pagedDataModel);
         return map;
-
     }
 
 
-    //获取查询剩余空间  //..
+    /*
+        获取查询剩余空间  //..
+        @return
+     */
     @PostMapping("/data/searchCellBySpace")
-    public Map searchCellbySpace(ListQueryModel query){
+    public Map searchCellbySpace(ListQueryModel query) {
         map.put("code", 200);
         map.put("isSuccess", true);
         List<CellMappingModel> cellMappingModels = cellEventService.searchCellbySpace(query);
@@ -177,14 +208,50 @@ public class DataController {
         return map;
     }
 
-    //..
-    //获取测试报警信息
+
+    /*
+        获取测试报警信息
+        @return
+     */
     @PostMapping("/data/getTestAlarm")
-    public Map getTestAlarms(){
+    public Map getTestAlarms() {
         map.put("code", 200);
+        map.put("isSuccess", true);
         List<TestAlarmModel> testAlarms = AlarmEventServiceImpl.getTestAlarms();
-        map.put("data",testAlarms);
+        map.put("data", testAlarms);
         map.put("message", "成功获取数据.");
+        return map;
+    }
+
+    //..
+    /*
+        获取电子文件是否存在PDF档
+
+     */
+    @GetMapping("/data/checkPdfShowFileExist/{eDocId}")
+    public Map CheckPdfShowFileExist(@PathVariable String eDocId) {
+        map.put("code", 200);
+
+        String path = fileService.getViewPdfName(eDocId);
+        path = ymlConfig.getPdfRootPath()+path;
+        try {
+            if(path != null) {
+                File testFile = new File(path);
+                if (!testFile.exists()) {
+                    System.out.println("文件不存在");
+                    map.put("data", false);
+                    map.put("message", "该文件不存在PDF档");
+                } else {
+                    map.put("data", true);
+                    map.put("message", "该文件存在PDF档");
+                }
+                map.put("isSuccess", true);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            map.put("isSuccess", false);
+            map.put("message", e.getMessage());
+        }
         return map;
     }
 

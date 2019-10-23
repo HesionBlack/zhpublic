@@ -24,5 +24,8 @@ import java.util.Map;
 public interface DocumentSqlDao {
 
     @Select("select * from f_document where boxid=#{id} order by doccode limit #{pageIndex},#{pageItemCount}")
-    public List<Map<String,Object>> getDocumentsByBoxId(long id, int pageIndex, int pageItemCount);
+    public List<Map<String, Object>> getDocumentsByBoxId(long id, int pageIndex, int pageItemCount);
+
+    @Select("SELECT * From e_record WHERE archid IN(${sql})")
+    public List<Map<String, Object>> getDocumentsBydocId(String sql);
 }

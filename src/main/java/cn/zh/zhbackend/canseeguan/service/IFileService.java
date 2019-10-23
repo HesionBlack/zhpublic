@@ -17,5 +17,6 @@ package cn.zh.zhbackend.canseeguan.service;/**
  *
  * @create: 2019-10-23 08:49
  **/
-public class IFileService {
+public interface IFileService {
+    public String getViewPdfName(String edocId);
 }
