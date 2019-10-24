@@ -98,7 +98,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     boxModel.cellId = cellModel.cellId;
                     boxModel.cellWidth=0.0d;
 
-                    boxModel.boxId = String.valueOf(cellBoxestoBoxModelS.get(i).boxId);
+                    boxModel.boxId = cellBoxestoBoxModelS.get(i).boxId;
                     boxModel.boxName = cellBoxestoBoxModelS.get(i).boxName;
                     //获取字符串最后一个字符,并转换成数字
                     boxModel.index = getBoxIndex(cellBoxestoBoxModelS.get(i).index, cellMappingModel.cellMapString);
@@ -186,7 +186,7 @@ public class CellEventServiceImpl implements ICellEventService {
                         box.cellId = cellMapping.cellId;
                         box.boxInfo=map;
 
-                        box.boxId = String.valueOf(map.get("id"));
+                        box.boxId = (Integer) map.get("id");
                         box.boxName = String.valueOf(map.get("boxcode"));
                         box.thick = 0;
                         if (0==box.thick){
@@ -250,9 +250,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     Map<String, Object> map = queryBoxesInfo.get(i);
                     boxModel.boxInfo=map;
                     boxModel.boxName = String.valueOf(map.get("boxcode"));
-                    Integer id = ((Number) map.get("id")).intValue();
-                    String boxId = id.toString();
-                    boxModel.boxId = boxId;
+                    boxModel.boxId = (Integer) map.get("id");
                     boxModels.add(boxModel);
                     String position = map.get("position").toString();
                     keyList.add(position.substring(0,position.length()-2));

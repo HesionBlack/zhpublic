@@ -49,9 +49,8 @@ public class StringUtils {
      * @return
      */
     public static String longToString(Object num){
-        System.out.println("StringUtils-o:"+num);
         String s = num.toString();
-        System.out.println("StringUtils-s:"+s);
+        System.out.println("finish transfer");
         return  s;
 
     }

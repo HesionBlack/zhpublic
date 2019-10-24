@@ -9,6 +9,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 580699
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
 #spring:
 #  data:
 #    mongodb:
@@ -25,3 +29,4 @@ mybatis:
 
 ##pdf文件根目录
 pdfRootPath: /Users/mac/Desktop
+

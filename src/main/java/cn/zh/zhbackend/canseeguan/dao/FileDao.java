@@ -30,4 +30,6 @@ import java.util.Map;
 public interface FileDao {
     @Select("SELECT filepath,savefilename,extension FROM e_record WHERE id = #{eDocId}")
     public List<Map<String,Object>> getFilePath(String eDocId);
+
+
 }

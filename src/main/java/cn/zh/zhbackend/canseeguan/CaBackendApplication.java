@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = "*",allowCredentials = "true")
 @SpringBootApplication
 @ComponentScan(basePackages = "cn.zh.zhbackend.canseeguan.*")
-public class MonodbdemoApplication {
+public class CaBackendApplication {
 
 //    @Bean
 //    public FilterRegistrationBean jwtFilter() {
@@ -18,7 +18,7 @@ public class MonodbdemoApplication {
 //        return registrationBean;
 //    }
     public static void main(String[] args) {
-        SpringApplication.run(MonodbdemoApplication.class, args);
+        SpringApplication.run(CaBackendApplication.class, args);
     }
 
 }

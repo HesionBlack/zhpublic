@@ -17,6 +17,7 @@ import java.util.Map;
  * @since JDK 1.8
  */
 @Mapper
+@Repository
 public interface CellsqlDao {
 
 

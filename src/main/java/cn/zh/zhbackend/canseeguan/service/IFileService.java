@@ -8,6 +8,14 @@ package cn.zh.zhbackend.canseeguan.service;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.domain.PptActionSignReqModel;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.nio.Buffer;
+import java.util.Map;
+
 /**
  * @program: zhbackend
  *
@@ -19,4 +27,6 @@ package cn.zh.zhbackend.canseeguan.service;/**
  **/
 public interface IFileService {
     public String getViewPdfName(String edocId);
+    Map uploadPpt(String fileName, byte[] fileData) throws IOException;
+//    String CheckActionUrl(String srcUrlWithSign);
 }
