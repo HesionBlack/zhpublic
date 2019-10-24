@@ -32,6 +32,8 @@ public class DataService {
 
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
     public static Map<Integer, CellMappingModel> dicCellMapping;
+
+
     public  void UpdateCellTickCache() {
         List<Map<String, Object>> maps = cellsqlDao.UpdateCellTickCache();
         String keyString="";

@@ -80,4 +80,6 @@ public interface CellsqlDao {
             "round(sum(`backwidth`) / 1000 , 3) totalThick " +
             "FROM f_box GROUP BY cellMapString")
     List<Map<String,Object>> UpdateCellTickCache();
+
+
 }

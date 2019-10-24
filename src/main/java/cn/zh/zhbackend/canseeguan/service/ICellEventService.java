@@ -24,4 +24,6 @@ public interface ICellEventService {
     List<CellMappingModel> searchCellbySpace(ListQueryModel query);
 
     List<CabinetModel> getCellSummaryLimitSpace(CabinetModel cabinetModel,Double space);
+
+    List<CabinetSummaryModel> GetRoomCabinetSummary(RoomModel roomModel);
 }
