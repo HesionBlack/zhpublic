@@ -13,6 +13,10 @@ import cn.zh.zhbackend.canseeguan.domain.CellMappingModel;
 import cn.zh.zhbackend.canseeguan.domain.TagMappingModel;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -35,9 +39,11 @@ public class DataService {
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
     public static Map<Integer, CellMappingModel> dicCellMapping;
     public  void UpdateCellTickCache() {
+        //查询数据库
         List<Map<String, Object>> maps = cellsqlDao.UpdateCellTickCache();
         String keyString="";
         try {
+            //遍历结果集
             for (int i = 0; i < maps.size(); i++) {
                 Map<String, Object> map = maps.get(i);
                 String cellMapString = map.get("cellMapString").toString();
@@ -47,6 +53,7 @@ public class DataService {
 
                     dicCellMapping.forEach((key, value) -> {
                         if (value.cellMapString.equals(cellMapString)) {
+                            //匹配上CellMaping Excel表中数据的格子，对两个属性赋值
                             value.totalBoxThick = totalThick.isEmpty() ? 0d : Double.valueOf(totalThick);
                             value.totalBoxCount = totalBoxes;
                         }
@@ -159,6 +166,53 @@ public class DataService {
         return res;
     }
 
+    public String getViewPdfName(String edocId) {
 
+        String path = "";
+        List<Map<String, Object>> filePath = dataDao.getFilePath(edocId);
+        for (int i = 0; i < filePath.size(); i++) {
+            Map<String, Object> map = filePath.get(i);
+            String filepath = (String) map.get("filepath");
+            String savefilename = (String) map.get("savefilename");
+            String extension = (String) map.get("extension");
+            path = filepath.replace("/", "\\") + savefilename.replace("." + extension, "_show.pdf");
+        }
+        return path;
+    }
+
+    /**
+     * 获取电子文件PDF档
+     *
+     * @param eDocId
+     * @return
+     */
+    public ResModel getPdfShowFile(String eDocId) {
+        ResModel res = new ResModel();
+        res.setCode(200);
+        try {
+            String rootPath = appconfig.getPdfRootPath() == null ? "D:" : appconfig.getPdfRootPath();
+            String path = getViewPdfName(eDocId);
+            String filePath = rootPath + path;
+            File file = new File(filePath);
+            //BufferedReader br = new BufferedReader(new FileReader(file));
+            BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"));
+            if (path != null && file.exists()) {
+
+                res.data =br.lines();
+                res.message = file.getName();
+                res.isSuccess = true;
+            } else {
+                res.data = null;
+                res.message = "不存在PDF电子档文件";
+                res.isSuccess = false;
+            }
+        } catch (Exception ex) {
+            res.data = null;
+            res.message = ex.getMessage();
+            res.isSuccess = false;
+        }
+
+        return res;
+    }
 
 }
