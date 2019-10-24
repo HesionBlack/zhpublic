@@ -78,7 +78,7 @@ public class DataController {
         List<DeviceModel> deviceModels = alarmEventService.GetDevices(deviceIds);
         map.put("code", 200);
         map.put("isSuccess", true);
-        map.put("message", "成功获取数据.");
+        map.put("message", "成功获取数据....");
         map.put("data", deviceModels);
         return map;
     }
