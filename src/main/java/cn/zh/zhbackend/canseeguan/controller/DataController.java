@@ -311,7 +311,7 @@ public class DataController {
                 });
 
                 res.data = DataService.GetBoxDetailInfoByIdAndPosition(String.valueOf(rawBoxInfo.id), cellPos);
-                res.message = "成功获取数据.";
+                res.message = "成功获取数据...";
                 res.isSuccess = true;
                 return res;
             } catch (Exception ex) {
