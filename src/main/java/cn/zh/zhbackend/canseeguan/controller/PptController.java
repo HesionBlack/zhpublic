@@ -15,7 +15,16 @@ public class PptController {
 
 
     Map<String, Object> map = new HashMap<>();
-    //为ActionURL生成签名
+
+  /**
+   *功能描述 为ActionURL生成签名
+          * @author Martin
+          * @date 2019/10/24
+          * @param srcUrlModel
+          * @return java.util.Map
+  */
+
+
     @PostMapping("/ppt/sign")
     public Map SignActionUrl(@RequestBody PptActionSignReqModel srcUrlModel) throws Exception {
         String sha1 = PptUtils.SignActionUrl(srcUrlModel.srcUrl);
@@ -35,8 +44,8 @@ public class PptController {
         map.put("isSuccess",true);
         map.put("message","成功获取数据");
         map.put("data",);
-=======
-package cn.zh.zhbackend.canseeguan.controller;/**
+
+        /**
  * ClassName: PptController <br/>
  * Description: <br/>
  * date: 2019/10/23 上午10:36<br/>

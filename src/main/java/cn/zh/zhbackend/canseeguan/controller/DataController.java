@@ -386,8 +386,7 @@ public class DataController {
             }
         }
 
-=======
->>>>>>> 7e82ef3a14dcc8083f34c872af218e441a66dde9
+
     }
 }
 

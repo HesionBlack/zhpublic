@@ -278,6 +278,15 @@ public class CellEventServiceImpl implements ICellEventService {
         return boxModels;
     }
 
+
+    /**
+     *功能描述
+            * @author Martin
+            * @date 2019/10/24
+     * @param query
+            * @return java.util.List<cn.zh.zhbackend.canseeguan.domain.CellMappingModel>
+    */
+
     @Override
     public List<CellMappingModel> searchCellbySpace(ListQueryModel query) {
         dataService.UpdateCellTickCache();
@@ -406,10 +415,8 @@ public class CellEventServiceImpl implements ICellEventService {
             return -1;
         }
 
-
         return index;
     }
-
 
 
 }
