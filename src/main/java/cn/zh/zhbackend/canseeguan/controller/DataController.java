@@ -10,22 +10,19 @@ package cn.zh.zhbackend.canseeguan.controller;/**
 
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
 import cn.zh.zhbackend.canseeguan.domain.*;
-import cn.zh.zhbackend.canseeguan.service.ICellEventService;
+import cn.zh.zhbackend.canseeguan.service.DataService;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.DocumentServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.FileServiceImpl;
-import org.apache.poi.hssf.record.DVALRecord;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
-<<<<<<<HEAD
-import java.io.*;
-=======
+
 import javax.servlet.http.HttpServletResponse;
->>>>>>>1022
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,13 +43,9 @@ public class DataController {
     @Autowired
     private DocumentServiceImpl documentService;
     @Autowired
-<<<<<<<HEAD
     private FileServiceImpl fileService;
     @Autowired
     private YmlConfig ymlConfig;
-=======
-    private DataService dataService;
->>>>>>>1022
     ResModel resModel = new ResModel();
     Map<String, Object> map = new HashMap<>();
 
@@ -216,8 +209,6 @@ public class DataController {
         return map;
     }
 
-<<<<<<<HEAD
-
     /*
         获取测试报警信息
         @return
@@ -262,6 +253,7 @@ public class DataController {
             map.put("message", e.getMessage());
         }
         return map;
+<<<<<<< HEAD
 =======
         /**
          *根据id和position获取查询档案盒位置等信息
@@ -394,6 +386,8 @@ public class DataController {
             }
         }
 
+=======
+>>>>>>> 7e82ef3a14dcc8083f34c872af218e441a66dde9
     }
 }
 

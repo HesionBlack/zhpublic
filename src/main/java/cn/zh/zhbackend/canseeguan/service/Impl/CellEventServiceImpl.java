@@ -8,6 +8,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Utils.StringUtils;
 import cn.zh.zhbackend.canseeguan.dao.CellsqlDao;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.DataModule;
@@ -97,7 +98,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     boxModel.cellId = cellModel.cellId;
                     boxModel.cellWidth=0.0d;
 
-                    boxModel.boxId = String.valueOf(cellBoxestoBoxModelS.get(i).boxId);
+                    boxModel.boxId = cellBoxestoBoxModelS.get(i).boxId;
                     boxModel.boxName = cellBoxestoBoxModelS.get(i).boxName;
                     //获取字符串最后一个字符,并转换成数字
                     boxModel.index = getBoxIndex(cellBoxestoBoxModelS.get(i).index, cellMappingModel.cellMapString);
@@ -139,8 +140,7 @@ public class CellEventServiceImpl implements ICellEventService {
             for (int i = 0; i < queryDocuments.size(); i++) {
                 DocumentModel document = new DocumentModel();
                 Map<String, Object> map = queryDocuments.get(i);
-                Integer id = ((Number) map.get("id")).intValue();
-                document.documentId= id.toString();
+                document.documentId= StringUtils.longToString(map.get("id"));
                 document.docInfo = map;
                 documents.add(document);
                 Integer boxid = ((Number) map.get("boxid")).intValue();
@@ -186,7 +186,7 @@ public class CellEventServiceImpl implements ICellEventService {
                         box.cellId = cellMapping.cellId;
                         box.boxInfo=map;
 
-                        box.boxId = String.valueOf(map.get("id"));
+                        box.boxId = (Integer) map.get("id");
                         box.boxName = String.valueOf(map.get("boxcode"));
                         box.thick = 0;
                         if (0==box.thick){
@@ -250,9 +250,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     Map<String, Object> map = queryBoxesInfo.get(i);
                     boxModel.boxInfo=map;
                     boxModel.boxName = String.valueOf(map.get("boxcode"));
-                    Integer id = ((Number) map.get("id")).intValue();
-                    String boxId = id.toString();
-                    boxModel.boxId = boxId;
+                    boxModel.boxId = (Integer) map.get("id");
                     boxModels.add(boxModel);
                     String position = map.get("position").toString();
                     keyList.add(position.substring(0,position.length()-2));

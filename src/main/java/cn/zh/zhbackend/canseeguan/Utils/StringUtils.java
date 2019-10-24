@@ -43,4 +43,15 @@ public class StringUtils {
             return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
         }
     }
+    /**
+     * 将数据库中的long型数据转成String类型
+     * @param num
+     * @return
+     */
+    public static String longToString(Object num){
+        String s = num.toString();
+        System.out.println("finish transfer");
+        return  s;
+
+    }
 }

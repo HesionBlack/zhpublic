@@ -10,5 +10,5 @@ public class EDocumentModel {
     public String eDocName;
     public EDocumentType type;
     public String src;
-    public Map<String, String> eDocInfo;
+    public Map<String, Object> eDocInfo;
 }
