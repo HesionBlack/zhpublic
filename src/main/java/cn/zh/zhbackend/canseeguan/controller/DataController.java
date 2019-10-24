@@ -10,18 +10,19 @@ package cn.zh.zhbackend.canseeguan.controller;/**
 
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
 import cn.zh.zhbackend.canseeguan.domain.*;
-import cn.zh.zhbackend.canseeguan.service.ICellEventService;
+import cn.zh.zhbackend.canseeguan.service.DataService;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.DocumentServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.FileServiceImpl;
-import org.apache.poi.hssf.record.DVALRecord;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
+
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -208,7 +209,6 @@ public class DataController {
         return map;
     }
 
-
     /*
         获取测试报警信息
         @return
@@ -233,9 +233,9 @@ public class DataController {
         map.put("code", 200);
 
         String path = fileService.getViewPdfName(eDocId);
-        path = ymlConfig.getPdfRootPath()+path;
+        path = ymlConfig.getPdfRootPath() + path;
         try {
-            if(path != null) {
+            if (path != null) {
                 File testFile = new File(path);
                 if (!testFile.exists()) {
                     System.out.println("文件不存在");
@@ -247,14 +247,12 @@ public class DataController {
                 }
                 map.put("isSuccess", true);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             map.put("isSuccess", false);
             map.put("message", e.getMessage());
         }
         return map;
     }
-
 }
-
 
