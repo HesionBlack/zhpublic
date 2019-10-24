@@ -8,6 +8,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Utils.ConvertLongToDateTime;
 import cn.zh.zhbackend.canseeguan.dao.AlarmDao;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.IAlarmEventService;
@@ -33,6 +34,32 @@ public class AlarmEventServiceImpl implements IAlarmEventService {
     public static TagMappingModel[] tagMappingModels;
 
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
+
+    public static List<TestAlarmModel> getTestAlarms() {
+        List<TestAlarmModel> testAlarmModels = new ArrayList<>();
+
+        Random rand = new Random();
+        int randNum = rand.nextInt(101)+ 300;
+
+        System.out.println("randNum:"+randNum);
+        Double eventValue = randNum/10d;
+
+        int randomState = rand.nextInt(3)+1;
+        //
+//        TestAlarmModel testAlarmModel1 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(new Date().getTime()),"h_001",eventValue,new Date().getTime(),)
+        TestAlarmModel testAlarmModel1 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"h_001",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(30)+1));
+        TestAlarmModel testAlarmModel2 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"t_001",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(30)+1));
+        TestAlarmModel testAlarmModel3 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"h_002",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(11)+40));
+        TestAlarmModel testAlarmModel4 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"t_002",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(30)+1));
+        TestAlarmModel testAlarmModel5 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"h_003",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(31)+30));
+        TestAlarmModel testAlarmModel6 = new TestAlarmModel(ConvertLongToDateTime.convertTimeToString(System.currentTimeMillis()),"t_003",eventValue.toString(),String.valueOf(System.currentTimeMillis()),String.valueOf(randomState),String.valueOf(rand.nextInt(41)+60));
+        testAlarmModels.add(testAlarmModel1);
+        testAlarmModels.add(testAlarmModel2);
+        testAlarmModels.add(testAlarmModel3);
+        testAlarmModels.add(testAlarmModel4);
+        testAlarmModels.add(testAlarmModel5);
+        return testAlarmModels;
+    }
 
 
     @Override

@@ -8,6 +8,7 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
  * @since JDK 1.8
  */
 
+import cn.zh.zhbackend.canseeguan.Utils.StringUtils;
 import cn.zh.zhbackend.canseeguan.dao.CellsqlDao;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.DataModule;
@@ -97,7 +98,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     boxModel.cellId = cellModel.cellId;
                     boxModel.cellWidth=0.0d;
 
-                    boxModel.boxId = String.valueOf(cellBoxestoBoxModelS.get(i).boxId);
+                    boxModel.boxId = cellBoxestoBoxModelS.get(i).boxId;
                     boxModel.boxName = cellBoxestoBoxModelS.get(i).boxName;
                     //获取字符串最后一个字符,并转换成数字
                     boxModel.index = getBoxIndex(cellBoxestoBoxModelS.get(i).index, cellMappingModel.cellMapString);
@@ -139,8 +140,7 @@ public class CellEventServiceImpl implements ICellEventService {
             for (int i = 0; i < queryDocuments.size(); i++) {
                 DocumentModel document = new DocumentModel();
                 Map<String, Object> map = queryDocuments.get(i);
-                Integer id = ((Number) map.get("id")).intValue();
-                document.documentId= id.toString();
+                document.documentId= StringUtils.longToString(map.get("id"));
                 document.docInfo = map;
                 documents.add(document);
                 Integer boxid = ((Number) map.get("boxid")).intValue();
@@ -186,7 +186,7 @@ public class CellEventServiceImpl implements ICellEventService {
                         box.cellId = cellMapping.cellId;
                         box.boxInfo=map;
 
-                        box.boxId = String.valueOf(map.get("id"));
+                        box.boxId = (Integer) map.get("id");
                         box.boxName = String.valueOf(map.get("boxcode"));
                         box.thick = 0;
                         if (0==box.thick){
@@ -250,9 +250,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     Map<String, Object> map = queryBoxesInfo.get(i);
                     boxModel.boxInfo=map;
                     boxModel.boxName = String.valueOf(map.get("boxcode"));
-                    Integer id = ((Number) map.get("id")).intValue();
-                    String boxId = id.toString();
-                    boxModel.boxId = boxId;
+                    boxModel.boxId = (Integer) map.get("id");
                     boxModels.add(boxModel);
                     String position = map.get("position").toString();
                     keyList.add(position.substring(0,position.length()-2));
@@ -308,6 +306,88 @@ public class CellEventServiceImpl implements ICellEventService {
         }));
         System.out.println("数据已经添加到列表中...");
         return cabinetModels;
+    }
+
+    @Override
+    public List<CabinetSummaryModel> GetRoomCabinetSummary(RoomModel roomModel) {
+        dataService.UpdateCellTickCache();
+        //List<CabinetModel> cabinetModels = new ArrayList<>();
+        //单元格映射实体数组集合    最后返回 cabinetSummaryModels
+        List<CellMappingModel> cellMappingModels = new ArrayList<>();
+        List<CabinetSummaryModel> cabinetSummaryModels = new ArrayList<>();
+
+        dataService.dicCellMapping.forEach((key, value) -> {
+            if (value.buildingId.equals(roomModel.buildingId)
+                    && value.floorId.equals(roomModel.floorId)
+                    && value.roomId.equals(roomModel.roomId)
+                    && value.cellType.equals("boxContainer"))
+                cellMappingModels.add(value);
+//            System.out.println("获取到的房间存储柜总数信息为："+cellMappingModels);
+        });
+        //System.out.println("获取到的房间存储柜总数信息为："+cellMappingModels);
+        //根据cabinetId 进行分组，得到的map集合
+//        Map<String, List<CellMappingModel>> collect1 = cellMappingModels.stream().collect(groupingBy(CellMappingModel::getCabinetId));
+//        System.out.println("通过密集柜分组后得到的集合"+collect1);//打印一下collect1集合。
+
+
+
+        String cabinetId="";
+        String cabinetIdTemp = "";
+        int n=1;
+        double totalWidth=0.0d;
+        double totalThick = 0.0d;
+        int totalBoxCount = 0;
+        List<CabinetSummaryModel> cabinetSummaryModels1 = new ArrayList<>();
+        for (int i = 0; i < cellMappingModels.size(); i++) {
+            CellMappingModel cellMappingModel = new CellMappingModel();
+            cabinetIdTemp=cellMappingModels.get(i).cabinetId;
+            cellMappingModel.cabinetId = cabinetIdTemp;
+
+            if (n<10){
+                if (roomModel.roomId.equals("D_wenshu")){ cabinetId = "D_wenshu_cab_0"+n;}
+                if (roomModel.roomId.equals("D_anjian")){cabinetId = "D_anjian_cab_0"+n;}
+                if ((i+1)%60==0)
+                    n++;
+            }
+            else{
+                if (roomModel.roomId.equals("D_wenshu")){cabinetId = "D_wenshu_cab_"+n;}
+                if (roomModel.roomId.equals("D_anjian")) {cabinetId = "D_anjian_cab_"+n;}
+                if ((1+i)%60==0)
+                    n++;
+            }
+
+            if (cellMappingModel.cabinetId.equals(cabinetId)){
+
+                totalWidth += cellMappingModels.get(i).cellWidth;
+
+                totalThick += cellMappingModels.get(i).totalBoxThick;
+
+                totalBoxCount += cellMappingModels.get(i).totalBoxCount;
+                if ((i+1)%60==0) {
+                    CabinetSummaryModel cabinetSummaryModel = new CabinetSummaryModel();
+                    cabinetSummaryModel.buildingId = roomModel.buildingId;
+                    cabinetSummaryModel.floorId = roomModel.floorId;
+                    cabinetSummaryModel.cabinetId = cabinetId;
+                    cabinetSummaryModel.roomId = roomModel.roomId;
+
+                    //根据cabinetid算出每一个 密集柜cabinet 的totalWidth
+                    cabinetSummaryModel.totalWidth = totalWidth;
+                    //根据cabinetid算出每一个 密集柜cabinet 的totalThick
+                    cabinetSummaryModel.totalThick = totalThick;
+                    //根据cabinetid算出每一个 密集柜cabinet 的totalBoxCount
+                    cabinetSummaryModel.totalBoxCount = totalBoxCount;
+                    cabinetSummaryModels1.add(cabinetSummaryModel);
+                    totalWidth=0.0d;
+                    totalThick = 0.0d;
+                    totalBoxCount = 0;
+                }
+
+            }
+
+
+        }
+
+        return  cabinetSummaryModels1;
     }
 
 

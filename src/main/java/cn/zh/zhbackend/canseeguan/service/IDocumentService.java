@@ -3,6 +3,7 @@ package cn.zh.zhbackend.canseeguan.service;
 import cn.zh.zhbackend.canseeguan.domain.BoxModel;
 import cn.zh.zhbackend.canseeguan.domain.DocumentModel;
 import cn.zh.zhbackend.canseeguan.domain.ListQueryModel;
+import com.sun.javadoc.Doc;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,6 @@ import java.util.Map;
  * @since JDK 1.8
  */
 public interface IDocumentService {
-    public Map getDocumentsByBoxId(long id, int pageIndex, int pageItemCount);
+    public List<DocumentModel> getDocumentsByBoxId(long id, int pageIndex, int pageItemCount);
 
 }

@@ -9,7 +9,7 @@ import java.util.Map;
 @Data
 @ToString(callSuper = true)
 public class BoxModel extends CellModel {
-    public String boxId;
+    public Integer boxId;
     public String boxName;
     public int index;
     public double thick;

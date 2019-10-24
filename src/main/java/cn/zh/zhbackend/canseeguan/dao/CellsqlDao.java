@@ -17,6 +17,7 @@ import java.util.Map;
  * @since JDK 1.8
  */
 @Mapper
+@Repository
 public interface CellsqlDao {
 
 
@@ -64,7 +65,7 @@ public interface CellsqlDao {
     public List<Map<String,Object>>  getBoxInfoById(String quertString);
 
 
-    @Select("select SQL_CALC_FOUND_ROWS *,substring_index(`position`, '-', 1) cellMapString "
+    @Select("select SQL_CALC_FOUND_ROWS *,subString_index(`position`, '-', 1) cellMapString "
             + "from f_box where fondsid like '%${queryString}%' "
             +"or boxcode like '%${queryString}%'"
             +"or classfy like '%${queryString}%'"
@@ -75,9 +76,11 @@ public interface CellsqlDao {
     )
     List<Map<String,Object>> getQueryBoxesInfo(String queryString, int pageIndex, int pageItemCount, int itemStart);
 
-    @Select("SELECT substring_index(`position`, '-', 1) cellMapString," +
+    @Select("SELECT subString_index(`position`, '-', 1) cellMapString," +
             "count(*) totalBoxes," +
             "round(sum(`backwidth`) / 1000 , 3) totalThick " +
             "FROM f_box GROUP BY cellMapString")
     List<Map<String,Object>> UpdateCellTickCache();
+
+
 }

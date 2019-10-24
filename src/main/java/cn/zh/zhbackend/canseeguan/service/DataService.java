@@ -38,6 +38,8 @@ public class DataService {
 
     public static Map<Integer, TagMappingModel> dicTagDeviceMapping;
     public static Map<Integer, CellMappingModel> dicCellMapping;
+
+
     public  void UpdateCellTickCache() {
         //查询数据库
         List<Map<String, Object>> maps = cellsqlDao.UpdateCellTickCache();
@@ -66,4 +68,9 @@ public class DataService {
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ff40d8943a330988a2d6580903502d446340053f
 }
