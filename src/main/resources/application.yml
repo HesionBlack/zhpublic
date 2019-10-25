@@ -1,14 +1,14 @@
 server:
-  port: 9988
+  port: 7788
 spring:
   data:
     mongodb:
       uri: mongodb://192.168.0.51:27017/cyberArchive
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/thams?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://47.93.25.57:3306/thams?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 580699
+    password: 1234
   servlet:
     multipart:
       max-file-size: 100MB
