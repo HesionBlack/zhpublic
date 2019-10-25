@@ -98,7 +98,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     boxModel.cellId = cellModel.cellId;
                     boxModel.cellWidth=0.0d;
 
-                    boxModel.boxId = cellBoxestoBoxModelS.get(i).boxId;
+                    boxModel.boxId = StringUtils.longToString(cellBoxestoBoxModelS.get(i).boxId);
                     boxModel.boxName = cellBoxestoBoxModelS.get(i).boxName;
                     //获取字符串最后一个字符,并转换成数字
                     boxModel.index = getBoxIndex(cellBoxestoBoxModelS.get(i).index, cellMappingModel.cellMapString);
@@ -186,7 +186,7 @@ public class CellEventServiceImpl implements ICellEventService {
                         box.cellId = cellMapping.cellId;
                         box.boxInfo=map;
 
-                        box.boxId = (Integer) map.get("id");
+                        box.boxId = StringUtils.longToString(map.get("id"));
                         box.boxName = String.valueOf(map.get("boxcode"));
                         box.thick = 0;
                         if (0==box.thick){
@@ -250,7 +250,7 @@ public class CellEventServiceImpl implements ICellEventService {
                     Map<String, Object> map = queryBoxesInfo.get(i);
                     boxModel.boxInfo=map;
                     boxModel.boxName = String.valueOf(map.get("boxcode"));
-                    boxModel.boxId = (Integer) map.get("id");
+                    boxModel.boxId = StringUtils.longToString(map.get("id"));
                     boxModels.add(boxModel);
                     String position = map.get("position").toString();
                     keyList.add(position.substring(0,position.length()-2));
@@ -325,12 +325,13 @@ public class CellEventServiceImpl implements ICellEventService {
         List<CellMappingModel> cellMappingModels = new ArrayList<>();
         List<CabinetSummaryModel> cabinetSummaryModels = new ArrayList<>();
 
-        dataService.dicCellMapping.forEach((key, value) -> {
+        DataService.dicCellMapping.forEach((key, value) -> {
             if (value.buildingId.equals(roomModel.buildingId)
                     && value.floorId.equals(roomModel.floorId)
                     && value.roomId.equals(roomModel.roomId)
-                    && value.cellType.equals("boxContainer"))
+                    && value.cellType.equals("boxContainer")) {
                 cellMappingModels.add(value);
+            }
 //            System.out.println("获取到的房间存储柜总数信息为："+cellMappingModels);
         });
         //System.out.println("获取到的房间存储柜总数信息为："+cellMappingModels);
@@ -355,14 +356,16 @@ public class CellEventServiceImpl implements ICellEventService {
             if (n<10){
                 if (roomModel.roomId.equals("D_wenshu")){ cabinetId = "D_wenshu_cab_0"+n;}
                 if (roomModel.roomId.equals("D_anjian")){cabinetId = "D_anjian_cab_0"+n;}
-                if ((i+1)%60==0)
+                if ((i+1)%60==0) {
                     n++;
+                }
             }
             else{
                 if (roomModel.roomId.equals("D_wenshu")){cabinetId = "D_wenshu_cab_"+n;}
                 if (roomModel.roomId.equals("D_anjian")) {cabinetId = "D_anjian_cab_"+n;}
-                if ((1+i)%60==0)
+                if ((1+i)%60==0) {
                     n++;
+                }
             }
 
             if (cellMappingModel.cabinetId.equals(cabinetId)){
