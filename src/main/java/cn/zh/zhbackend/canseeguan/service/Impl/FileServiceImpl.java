@@ -9,19 +9,13 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
  */
 
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
-import cn.zh.zhbackend.canseeguan.Utils.PptUtil;
 import cn.zh.zhbackend.canseeguan.dao.FileDao;
-import cn.zh.zhbackend.canseeguan.domain.PptActionSignReqModel;
 import cn.zh.zhbackend.canseeguan.domain.PptModel;
 import cn.zh.zhbackend.canseeguan.service.IFileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.*;
-import java.nio.Buffer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
