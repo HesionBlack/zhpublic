@@ -1,7 +1,7 @@
 package cn.zh.zhbackend.canseeguan.Config;
 
 
-import com.zh.entity.DataModel;
+import cn.zh.zhbackend.canseeguan.service.DataModule;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +16,8 @@ public class InitialingzingMappingData implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
 
         System.out.println("InitializingMappingData");
-        DataModel.InitCellMapping();
+        DataModule.initCellMapping();
+        DataModule.initTagMapping();
 
     }
 }

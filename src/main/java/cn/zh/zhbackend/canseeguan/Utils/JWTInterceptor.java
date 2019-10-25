@@ -1,7 +1,6 @@
 package cn.zh.zhbackend.canseeguan.Utils;
 
-import com.zh.service.UserService;
-import com.zh.utils.JwtUtils;
+import cn.zh.zhbackend.canseeguan.service.Impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

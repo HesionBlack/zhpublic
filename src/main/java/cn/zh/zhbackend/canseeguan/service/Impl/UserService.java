@@ -1,7 +1,9 @@
 package cn.zh.zhbackend.canseeguan.service.Impl;
 
 
+import cn.zh.zhbackend.canseeguan.Utils.JwtUtils;
 import cn.zh.zhbackend.canseeguan.dao.UserDao;
+import cn.zh.zhbackend.canseeguan.dao.UserDaoImpl;
 import cn.zh.zhbackend.canseeguan.domain.ResModel;
 import cn.zh.zhbackend.canseeguan.domain.User;
 import cn.zh.zhbackend.canseeguan.service.IUserService;
@@ -15,14 +17,16 @@ import java.util.Map;
 @Service
 public class UserService implements IUserService {
     @Autowired
-    private UserDao userDao;
-
+    private UserDaoImpl userDao;
+    @Autowired
+    private UserDao userDao1;
     ResModel res = new ResModel();
+
     @Override
     public ResModel login(User user) throws Exception {
-         List<User> isloginSuccess = userDao.login(user);
-        System.out.println("Service"+isloginSuccess);
-        if(!isloginSuccess.isEmpty()){
+        List<User> isloginSuccess = userDao1.login(user);
+        System.out.println("Service" + isloginSuccess);
+        if (!isloginSuccess.isEmpty()) {
             res.setCode(200);
             return res;
         }
@@ -32,17 +36,14 @@ public class UserService implements IUserService {
 
     @Override
     public List<User> findAll() {
-        return userDao.findAll();
+        return null;
     }
 
     @Override
     public ResModel add(User user) {
-        return userDao.add(user);
+        return null;
     }
 
-
-    @Autowired
-    private UserDaoImpl userDao;
 
     /**
      * 用户登录
@@ -79,6 +80,7 @@ public class UserService implements IUserService {
 
     /**
      * 生成token
+     *
      * @param userId
      * @return
      */
@@ -86,18 +88,18 @@ public class UserService implements IUserService {
     public String getToken(String userId) {
 
         //存入JWT的payload中生成token
-        Map claims = new HashMap<String,Integer>();
-        claims.put("user_userId",userId);
+        Map claims = new HashMap<String, Integer>();
+        claims.put("user_userId", userId);
         String subject = "user";
         String token = null;
         try {
             //该token过期时间为12h
-            token = JwtUtils.createJWT(claims, subject, 1000*60*60*12 );
+            token = JwtUtils.createJWT(claims, subject, 1000 * 60 * 60 * 12);
         } catch (Exception e) {
             throw new RuntimeException("创建Token失败");
         }
 
-        System.out.println("token:"+token);
+        System.out.println("token:" + token);
         return token;
     }
 

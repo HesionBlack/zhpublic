@@ -1,6 +1,7 @@
 package cn.zh.zhbackend.canseeguan.controller;
 
 
+import cn.zh.zhbackend.canseeguan.Utils.AESUtils;
 import cn.zh.zhbackend.canseeguan.Utils.AjaxResponse;
 import cn.zh.zhbackend.canseeguan.Utils.JwtUtil;
 import cn.zh.zhbackend.canseeguan.domain.ResModel;
@@ -19,10 +20,11 @@ import java.util.Map;
 @RestController
 public class userController {
 
+    private static final String KEY = "zhonghuan13xxxxx";
     @Autowired
     private IUserService userService;
     Map<String, Object> map = new HashMap<>();
-
+    Map<String, Object> result = new HashMap<>();
     //登录
     @PostMapping("/user/login")
     public Map<String, Object> login(HttpServletResponse response, @RequestBody User user) throws Exception {

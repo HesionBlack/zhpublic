@@ -16,7 +16,6 @@ import java.util.Map;
  * @author Hesion<br />
  * @since JDK 1.8
  */
-@Mapper
 @Repository
 public interface CellsqlDao {
 

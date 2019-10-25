@@ -1,12 +1,8 @@
 package cn.zh.zhbackend.canseeguan.service;
 
-import cn.zh.zhbackend.canseeguan.domain.BoxModel;
 import cn.zh.zhbackend.canseeguan.domain.DocumentModel;
-import cn.zh.zhbackend.canseeguan.domain.ListQueryModel;
-import com.sun.javadoc.Doc;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * ClassName: IDocumentService <br/>

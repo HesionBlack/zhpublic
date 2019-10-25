@@ -1,7 +1,6 @@
 package cn.zh.zhbackend.canseeguan.dao;
 
 import cn.zh.zhbackend.canseeguan.domain.User;
-import com.zh.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

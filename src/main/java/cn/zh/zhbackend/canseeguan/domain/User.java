@@ -4,8 +4,16 @@ import lombok.Data;
 
 @Data
 public class User {
-    private String _id;
-    private String userId;
-    private String userName;
-    private String userPw;
+    public String _id;
+
+    public String userId;
+
+    public String userName;
+
+    public String userPw;
+
+    public String userPwNew;
+
+    public String userPwRepeat;
+
 }

@@ -416,5 +416,16 @@ public class DataController {
         }
     }
 
+    @PostMapping("/data/GetRoomCabinetSummary")
+    public Map GetRoomCabinetSummary(@RequestBody RoomModel roomModel) throws Exception{
+
+        List<CabinetSummaryModel> roomModels = cellEventService.GetRoomCabinetSummary(roomModel);
+
+        map.put("code",200);
+        map.put("isSuccess",true);
+        map.put("message",null);
+        map.put("data",roomModels);
+        return map;
+    }
 
 }
