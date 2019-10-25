@@ -407,5 +407,24 @@ public class DataController {
         }
     }
 
+    /**
+     *功能描述
+            * @author Martin
+            * @date 2019/10/25
+            * @param roomModel
+            * @return java.util.Map
+    */
+
+    @PostMapping("/data/GetRoomCabinetSummary")
+    public Map GetRoomCabinetSummary(@RequestBody RoomModel roomModel) throws Exception{
+
+        List<CabinetSummaryModel> roomModels = cellEventService.GetRoomCabinetSummary(roomModel);
+
+        map.put("code",200);
+        map.put("isSuccess",true);
+        map.put("message",null);
+        map.put("data",roomModels);
+        return map;
+    }
 
 }
