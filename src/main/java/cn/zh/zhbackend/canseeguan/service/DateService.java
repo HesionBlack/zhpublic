@@ -1,9 +1,10 @@
 package cn.zh.zhbackend.canseeguan.service;
 
 
-import com.zh.config.Appconfig;
-import com.zh.dao.DataDao;
-import com.zh.entity.*;
+import cn.zh.zhbackend.canseeguan.Config.Appconfig;
+import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
+import cn.zh.zhbackend.canseeguan.dao.DataDao;
+import cn.zh.zhbackend.canseeguan.domain.*;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,14 +26,15 @@ public class DateService {
     @Autowired
     private DataDao dataDao;
     @Autowired
-    Appconfig appconfig;
+    YmlConfig ymlConfig;
 
     public static BoxModel GetBoxDetailInfoByIdAndPosition(String id, String cellPos) {
         BoxModel resModel = new BoxModel();
-        resModel.setBoxId(id);
-        DataEntity.dicCellMapping.forEach((key, value) -> {
+        resModel.setBoxId(Integer.valueOf(id));
+        Map<Integer, CellMappingModel> dicCellMapping = DataService.dicCellMapping;
+        dicCellMapping.forEach((key, value) -> {
             if (value.cellMapString.equals(cellPos)) {
-                var item = DataEntity.dicCellMapping.get(cellPos);
+                var item = dicCellMapping.get(cellPos);
                 resModel.buildingId = item.buildingId;
                 resModel.floorId = item.floorId;
                 resModel.roomId = item.roomId;
@@ -46,40 +48,6 @@ public class DateService {
     }
 
 
-    /**
-     * 获取盒全部文档信息
-     *
-     * @param query
-     * @return
-     */
-    public ResModel GetDocumentsbyBoxId(ListQueryModel query) {
-        ResModel res = new ResModel();
-        res.setCode(200);
-        long boxid = 0;
-        int tCount = 0;
-        try {
-
-            if (query.whereConditions.length > 0) {
-                for (WhereCondition condition : query.whereConditions) {
-                    if (condition.field == "boxId" && condition.field != null) {
-                        boxid = Long.parseLong(condition.value.toString());
-                    }
-                    DocumentModel[] rep = dataDao.GetDocumentsbyBoxId(boxid, query.pageIndex, query.pageItemCount, tCount).toArray(new DocumentModel[0]);
-                    res.data = new PagedDataModel();
-                    res.setData(tCount);
-                    res.data = rep;
-                    res.isSuccess = true;
-                    res.message = "成功获取数据.";
-                }
-                res.isSuccess = false;
-            }
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return res;
-    }
 
     /**
      * 获取测试参数信息
@@ -154,7 +122,7 @@ public class DateService {
         ResModel res = new ResModel();
         res.setCode(200);
         try {
-            String rootPath = appconfig.getPdfRootPath() == null ? "D:" : appconfig.getPdfRootPath();
+            String rootPath =ymlConfig.getPdfRootPath() == null ? "" : ymlConfig.getPdfRootPath();
             String path = getViewPdfName(eDocId);
             String filePath = rootPath + path;
             File file = new File(filePath);

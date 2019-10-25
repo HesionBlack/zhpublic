@@ -10,8 +10,9 @@ package cn.zh.zhbackend.canseeguan.controller;/**
 
 import cn.zh.zhbackend.canseeguan.Config.Appconfig;
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
+import cn.zh.zhbackend.canseeguan.Utils.TokenUtils;
 import cn.zh.zhbackend.canseeguan.domain.*;
-import cn.zh.zhbackend.canseeguan.service.dateService;
+import cn.zh.zhbackend.canseeguan.service.DataService;
 import cn.zh.zhbackend.canseeguan.service.DateService;
 import cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl;
 import cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl;
@@ -266,10 +267,10 @@ public class DataController {
 
     @PostMapping(value = "/data/GetCellBoxes", produces = "application/json")
     public static BoxModel[] GetCellBoxes(@RequestBody CellModel cellModel, HttpServletResponse response) throws Exception {
-        Map<Integer, CellMappingModel> map = new readExcel().CellMappingread("CellMapping.xlsx");
+        Map<Integer, CellMappingModel> dicCellMapping = DataService.dicCellMapping;
         List<CellMappingModel> mappingModel = new ArrayList<>();
-        if (null != DataEntity.cellMapping) {
-            map.forEach((key, value) -> {
+        if (null != DataService.dicCellMapping) {
+            dicCellMapping.forEach((key, value) -> {
                 if (value.buildingId.equals(cellModel.buildingId) && value.floorId.equals(cellModel.floorId)
                         && value.roomId.equals(cellModel.roomId) &&
                         value.cabinetId.equals(cellModel.cabinetId) &&
@@ -327,7 +328,7 @@ public class DataController {
 
             String cellPos = rawBoxInfo.position.substring(0, len);
 
-            DataEntity.dicCellMapping.forEach((key, value) -> {
+            DataService.dicCellMapping.forEach((key, value) -> {
                 if (!value.cellMapString.equals(cellPos)) {
                     res.message = "cell 位置信息 (cellMapString) 信息不存在 [" + cellPos + "]";
                 }
@@ -413,11 +414,6 @@ public class DataController {
                 }
             }
         }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5b9b151addc13b874c7301044f16bb723e5d3bbc
     }
 
 
