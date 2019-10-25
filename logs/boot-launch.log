@@ -164,3 +164,650 @@ java.net.SocketException: Connection reset
 2019-10-25 10:09:07.852 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db2588273089186f817a2d5', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:9, serverValue:38}] to 192.168.0.51:27017
 2019-10-25 10:09:47.871 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db2588273089186f817a2d5', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:10, serverValue:39}] to 192.168.0.51:27017
 2019-10-25 10:10:27.886 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db2588273089186f817a2d5', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:11, serverValue:41}] to 192.168.0.51:27017
+2019-10-25 11:39:09.013 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting CaBackendApplication on bogon with PID 60254 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-25 11:39:09.043 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-25 11:39:09.286 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-25 11:39:09.287 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-25 11:39:10.779 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-25 11:39:10.816 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2019-10-25 11:39:11.487 +0800	INFO	org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker	330	restartedMain	Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6468526a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-25 11:39:12.075 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-25 11:39:12.101 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-25 11:39:12.116 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-25 11:39:12.117 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-25 11:39:12.249 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-25 11:39:12.250 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 2963 ms
+2019-10-25 11:39:14.362 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-25 11:39:14.438 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:155}] to 192.168.0.51:27017
+2019-10-25 11:39:14.444 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2012801}
+2019-10-25 11:39:15.403 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-25 11:39:15.761 +0800	WARN	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	60	restartedMain	Unable to start LiveReload server
+2019-10-25 11:39:15.816 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-25 11:39:15.870 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-25 11:39:15.876 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started CaBackendApplication in 7.856 seconds (JVM running for 10.116)
+2019-10-25 11:39:39.999 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-25 11:39:40.000 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-25 11:39:40.026 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 24 ms
+2019-10-25 11:39:40.754 +0800	INFO	com.zaxxer.hikari.HikariDataSource	110	http-nio-9988-exec-1	HikariPool-1 - Starting...
+2019-10-25 11:39:41.669 +0800	INFO	com.zaxxer.hikari.HikariDataSource	123	http-nio-9988-exec-1	HikariPool-1 - Start completed.
+2019-10-25 11:39:41.696 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==>  Preparing: select SQL_CALC_FOUND_ROWS * from f_document where fondscode like '%5%'or archcode like '%5%'or author like '%5%' or box like '%5%'or classfy like '%5%'or classfyname like '%5%'or retentionperiod like '%5%'or boxid like '%5%'or department like '%5%'or security like '%5%'or departmentsn like '%5%'or title like '%5%'or filetitle like '%5%'or filetype like '%5%'or status like '%5%'limit ?, ? 
+2019-10-25 11:39:41.751 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==> Parameters: 0(Integer), 5(Integer)
+2019-10-25 11:39:41.875 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	<==      Total: 2
+2019-10-25 11:39:41.902 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==>  Preparing: SELECT * From f_box WHERE id IN(0,0) 
+2019-10-25 11:39:41.904 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==> Parameters: 
+2019-10-25 11:39:41.918 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	<==      Total: 1
+2019-10-25 11:39:41.948 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-1	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer] with root cause
+java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+	at cn.zh.zhbackend.canseeguan.service.Impl.CellEventServiceImpl.getQueryDocuments(CellEventServiceImpl.java:189) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.getQueryDocuments(DataController.java:172) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-25 11:39:54.464 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:2, serverValue:157}] to 192.168.0.51:27017
+2019-10-25 11:40:34.477 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:3, serverValue:158}] to 192.168.0.51:27017
+2019-10-25 11:41:14.495 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:4, serverValue:159}] to 192.168.0.51:27017
+2019-10-25 11:41:54.513 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:5, serverValue:161}] to 192.168.0.51:27017
+2019-10-25 11:42:34.528 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26e62730891eb5e276ea8', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:6, serverValue:162}] to 192.168.0.51:27017
+2019-10-25 11:42:55.154 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	208	Thread-25	Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-25 11:42:55.156 +0800	INFO	com.zaxxer.hikari.HikariDataSource	350	Thread-25	HikariPool-1 - Shutdown initiated...
+2019-10-25 11:42:55.175 +0800	INFO	com.zaxxer.hikari.HikariDataSource	352	Thread-25	HikariPool-1 - Shutdown completed.
+2019-10-25 11:43:51.012 +0800	INFO	org.springframework.boot.StartupInfoLogger	50	restartedMain	Starting CaBackendApplication on bogon with PID 61490 (/Users/mac/Desktop/Zh/target/classes started by mac in /Users/mac/Desktop/Zh)
+2019-10-25 11:43:51.089 +0800	INFO	org.springframework.boot.SpringApplication	648	restartedMain	No active profile set, falling back to default profiles: default
+2019-10-25 11:43:51.207 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-25 11:43:51.208 +0800	INFO	org.springframework.boot.logging.DeferredLog	225	restartedMain	For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-25 11:43:52.868 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	126	restartedMain	Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-25 11:43:52.915 +0800	INFO	org.springframework.data.repository.config.RepositoryConfigurationDelegate	182	restartedMain	Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2019-10-25 11:43:53.650 +0800	INFO	org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker	330	restartedMain	Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7aa781f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-25 11:43:54.299 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	90	restartedMain	Tomcat initialized with port(s): 9988 (http)
+2019-10-25 11:43:54.321 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing ProtocolHandler ["http-nio-9988"]
+2019-10-25 11:43:54.338 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting service [Tomcat]
+2019-10-25 11:43:54.339 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-25 11:43:54.476 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Initializing Spring embedded WebApplicationContext
+2019-10-25 11:43:54.477 +0800	INFO	org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext	284	restartedMain	Root WebApplicationContext: initialization completed in 3269 ms
+2019-10-25 11:43:56.471 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	restartedMain	Cluster created with settings {hosts=[192.168.0.51:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-25 11:43:56.550 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26f7c730891f0328784cd', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:1, serverValue:163}] to 192.168.0.51:27017
+2019-10-25 11:43:56.555 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26f7c730891f0328784cd', description='null'}-192.168.0.51:27017	Monitor thread successfully connected to server with description ServerDescription{address=192.168.0.51:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2233525}
+2019-10-25 11:43:57.527 +0800	INFO	org.springframework.scheduling.concurrent.ExecutorConfigurationSupport	171	restartedMain	Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-25 11:43:57.873 +0800	WARN	org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer	60	restartedMain	Unable to start LiveReload server
+2019-10-25 11:43:57.929 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	restartedMain	Starting ProtocolHandler ["http-nio-9988"]
+2019-10-25 11:43:57.990 +0800	INFO	org.springframework.boot.web.embedded.tomcat.TomcatWebServer	202	restartedMain	Tomcat started on port(s): 9988 (http) with context path ''
+2019-10-25 11:43:57.996 +0800	INFO	org.springframework.boot.StartupInfoLogger	59	restartedMain	Started CaBackendApplication in 8.018 seconds (JVM running for 10.365)
+2019-10-25 11:44:09.910 +0800	INFO	org.apache.juli.logging.DirectJDKLog	173	http-nio-9988-exec-1	Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-25 11:44:09.911 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	524	http-nio-9988-exec-1	Initializing Servlet 'dispatcherServlet'
+2019-10-25 11:44:09.929 +0800	INFO	org.springframework.web.servlet.FrameworkServlet	546	http-nio-9988-exec-1	Completed initialization in 17 ms
+2019-10-25 11:44:10.378 +0800	INFO	com.zaxxer.hikari.HikariDataSource	110	http-nio-9988-exec-1	HikariPool-1 - Starting...
+2019-10-25 11:44:11.094 +0800	INFO	com.zaxxer.hikari.HikariDataSource	123	http-nio-9988-exec-1	HikariPool-1 - Start completed.
+2019-10-25 11:44:11.187 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==>  Preparing: select SQL_CALC_FOUND_ROWS * from f_document where fondscode like '%5%'or archcode like '%5%'or author like '%5%' or box like '%5%'or classfy like '%5%'or classfyname like '%5%'or retentionperiod like '%5%'or boxid like '%5%'or department like '%5%'or security like '%5%'or departmentsn like '%5%'or title like '%5%'or filetitle like '%5%'or filetype like '%5%'or status like '%5%'limit ?, ? 
+2019-10-25 11:44:11.253 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==> Parameters: 0(Integer), 5(Integer)
+2019-10-25 11:44:11.474 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	<==      Total: 2
+2019-10-25 11:44:11.521 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==>  Preparing: SELECT * From f_box WHERE id IN(0,0) 
+2019-10-25 11:44:11.522 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	==> Parameters: 
+2019-10-25 11:44:11.538 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-1	<==      Total: 1
+2019-10-25 11:44:18.591 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	==>  Preparing: select * from f_document where boxid=? order by doccode limit ?,? 
+2019-10-25 11:44:18.592 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	==> Parameters: 0(Long), 0(Integer), 10(Integer)
+2019-10-25 11:44:18.622 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	<==      Total: 10
+2019-10-25 11:44:18.625 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	==>  Preparing: SELECT * From e_record WHERE archid IN(1526970387215600032,1526970387215600033,1526970387215600034,1526970387215600035,1526970387215600036,1526970387215600037,1526970387215600038,1526970387215600039,1526970387215600040,1526970387215600041) 
+2019-10-25 11:44:18.626 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	==> Parameters: 
+2019-10-25 11:44:18.637 +0800	DEBUG	org.apache.ibatis.logging.jdbc.BaseJdbcLogger	143	http-nio-9988-exec-3	<==      Total: 1
+2019-10-25 11:44:36.574 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26f7c730891f0328784cd', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:2, serverValue:165}] to 192.168.0.51:27017
+2019-10-25 11:45:15.604 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Opened connection [connectionId{localValue:3, serverValue:166}] to 192.168.0.51:27017
+2019-10-25 11:45:16.586 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26f7c730891f0328784cd', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:4, serverValue:167}] to 192.168.0.51:27017
+2019-10-25 11:45:18.288 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-8	Closed connection [connectionId{localValue:3, serverValue:166}] to 192.168.0.51:27017 because there was a socket exception raised on another connection from this pool.
+2019-10-25 11:45:18.295 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-8	Opened connection [connectionId{localValue:5, serverValue:168}] to 192.168.0.51:27017
+2019-10-25 11:45:18.309 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-9	Opened connection [connectionId{localValue:6, serverValue:169}] to 192.168.0.51:27017
+2019-10-25 11:45:28.999 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-10	Opened connection [connectionId{localValue:7, serverValue:170}] to 192.168.0.51:27017
+2019-10-25 11:45:29.322 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	90	http-nio-9988-exec-1	INFO GetAlarmList:[AlarmModel(super=TagMappingModel(super=DeviceMappingModel(buildingId=b_jsju, floorId=Warning_Education_Centre_06, roomId=D_wenshu, deviceId=D_wenshu_humiture_03, deviceName=环境传感器M03, deviceType=ht, deviceMapString=JSJY-3C-AJ-M03), tagKey=ht_h, tagId=h_003, tagName=室内湿度3, tagUnit=null), title=室内湿度3（报警类型：null , 报警值：30.2 , 报警限值：null）, eventTime=2019-08-05 06:35:24, state=1, priority=49, rawData=Alarm(_id=5d475dace4573504306139fc, SerialNo=1564958124276, ServerID=null, TagID=h_003, AlarmType=null, AlarmState=1, EventTime=1564958124000, EventValue=30.2, LimitValue=null, AlarmGroup=null, AlarmPriority=49, TagName=null, TagComment=null, AlarmComment=null, GroupName=null, Operator=null, Reviewer=null, ReviewTime=0, ReviewContent=null, AckTime=0, AckValue=null, AckOperator=null, RetTime=0, RetValue=null, RetOperator=null))]
+2019-10-25 11:45:42.361 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-3	dicTagDeviceMapping has value
+2019-10-25 11:45:42.363 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-3	deviceId > 0 
+2019-10-25 11:45:42.364 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-3	设备对比完毕
+2019-10-25 11:45:43.293 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-4	dicTagDeviceMapping has value
+2019-10-25 11:45:43.294 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-4	deviceId > 0 
+2019-10-25 11:45:43.294 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-4	设备对比完毕
+2019-10-25 11:45:43.303 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-4	Opened connection [connectionId{localValue:8, serverValue:171}] to 192.168.0.51:27017
+2019-10-25 11:45:44.296 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-5	dicTagDeviceMapping has value
+2019-10-25 11:45:44.297 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-5	deviceId > 0 
+2019-10-25 11:45:44.298 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-5	设备对比完毕
+2019-10-25 11:45:45.293 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-6	dicTagDeviceMapping has value
+2019-10-25 11:45:45.294 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-6	deviceId > 0 
+2019-10-25 11:45:45.295 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-6	设备对比完毕
+2019-10-25 11:45:46.303 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-7	dicTagDeviceMapping has value
+2019-10-25 11:45:46.304 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-7	deviceId > 0 
+2019-10-25 11:45:46.305 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-7	设备对比完毕
+2019-10-25 11:45:46.312 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-7	Opened connection [connectionId{localValue:9, serverValue:172}] to 192.168.0.51:27017
+2019-10-25 11:45:47.301 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-10	dicTagDeviceMapping has value
+2019-10-25 11:45:47.303 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-10	deviceId > 0 
+2019-10-25 11:45:47.303 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-10	设备对比完毕
+2019-10-25 11:45:48.297 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-1	dicTagDeviceMapping has value
+2019-10-25 11:45:48.298 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-1	deviceId > 0 
+2019-10-25 11:45:48.299 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-1	设备对比完毕
+2019-10-25 11:45:49.296 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	106	http-nio-9988-exec-2	dicTagDeviceMapping has value
+2019-10-25 11:45:49.297 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	108	http-nio-9988-exec-2	deviceId > 0 
+2019-10-25 11:45:49.298 +0800	INFO	cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl	123	http-nio-9988-exec-2	设备对比完毕
+2019-10-25 11:45:49.308 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-2	Opened connection [connectionId{localValue:10, serverValue:173}] to 192.168.0.51:27017
+2019-10-25 11:45:53.047 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-5	Opened connection [connectionId{localValue:11, serverValue:174}] to 192.168.0.51:27017
+2019-10-25 11:45:56.606 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	cluster-ClusterId{value='5db26f7c730891f0328784cd', description='null'}-192.168.0.51:27017	Opened connection [connectionId{localValue:12, serverValue:175}] to 192.168.0.51:27017
+2019-10-25 11:46:03.209 +0800	WARN	com.mongodb.diagnostics.logging.SLF4JLogger	86	http-nio-9988-exec-3	Got socket exception on connection [connectionId{localValue:7, serverValue:170}] to 192.168.0.51:27017. All connections to 192.168.0.51:27017 will be closed.
+2019-10-25 11:46:03.211 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-3	Closed connection [connectionId{localValue:7, serverValue:170}] to 192.168.0.51:27017 because there was a socket exception raised by this connection.
+2019-10-25 11:46:03.223 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-3	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:99) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:444) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:72) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:200) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:269) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:131) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:123) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:242) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:233) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:136) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:701) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:462) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:406) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:179) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:132) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:86) ~[mongodb-driver-3.8.2.jar:?]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2671) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2408) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2391) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:829) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:815) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at cn.zh.zhbackend.canseeguan.dao.AlarmDao.GetTagData(AlarmDao.java:139) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl.GetDevices(AlarmEventServiceImpl.java:125) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.getEqpData(DataController.java:95) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-25 11:46:03.642 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-3	Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1100) ~[jackson-core-2.9.9.jar:2.9.9]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:915) ~[jackson-databind-2.9.9.3.jar:2.9.9.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:225) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:122) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[?:1.8.0_221]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1261) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:793) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:746) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:736) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1156) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:394) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.Response.action(Response.java:209) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	... 42 more
+2019-10-25 11:46:06.128 +0800	WARN	com.mongodb.diagnostics.logging.SLF4JLogger	86	http-nio-9988-exec-6	Got socket exception on connection [connectionId{localValue:8, serverValue:171}] to 192.168.0.51:27017. All connections to 192.168.0.51:27017 will be closed.
+2019-10-25 11:46:06.129 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-6	Closed connection [connectionId{localValue:8, serverValue:171}] to 192.168.0.51:27017 because there was a socket exception raised by this connection.
+2019-10-25 11:46:06.130 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-6	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:99) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:444) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:72) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:200) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:269) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:131) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:123) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:242) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:233) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:136) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:701) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:462) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:406) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:179) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:132) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:86) ~[mongodb-driver-3.8.2.jar:?]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2671) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2408) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2391) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:829) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:815) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at cn.zh.zhbackend.canseeguan.dao.AlarmDao.GetTagData(AlarmDao.java:139) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl.GetDevices(AlarmEventServiceImpl.java:125) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.getEqpData(DataController.java:95) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-25 11:46:06.136 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-6	Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1100) ~[jackson-core-2.9.9.jar:2.9.9]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:915) ~[jackson-databind-2.9.9.3.jar:2.9.9.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:225) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:122) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[?:1.8.0_221]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1261) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:793) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:746) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:736) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1156) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:394) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.Response.action(Response.java:209) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	... 42 more
+2019-10-25 11:46:09.126 +0800	WARN	com.mongodb.diagnostics.logging.SLF4JLogger	86	http-nio-9988-exec-1	Got socket exception on connection [connectionId{localValue:9, serverValue:172}] to 192.168.0.51:27017. All connections to 192.168.0.51:27017 will be closed.
+2019-10-25 11:46:09.128 +0800	INFO	com.mongodb.diagnostics.logging.SLF4JLogger	71	http-nio-9988-exec-1	Closed connection [connectionId{localValue:9, serverValue:172}] to 192.168.0.51:27017 because there was a socket exception raised by this connection.
+2019-10-25 11:46:09.129 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-1	Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception receiving message; nested exception is com.mongodb.MongoSocketReadException: Exception receiving message] with root cause
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_221]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_221]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:89) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:554) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:425) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:289) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:255) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:99) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:444) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:72) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:200) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:269) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:131) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:123) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:242) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:233) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.CommandOperationHelper.executeWrappedCommandProtocol(CommandOperationHelper.java:136) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:701) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:462) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:406) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:695) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:83) ~[mongodb-driver-core-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:179) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:132) ~[mongodb-driver-3.8.2.jar:?]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:86) ~[mongodb-driver-3.8.2.jar:?]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2671) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2408) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2391) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:829) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:815) ~[spring-data-mongodb-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at cn.zh.zhbackend.canseeguan.dao.AlarmDao.GetTagData(AlarmDao.java:139) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.service.Impl.AlarmEventServiceImpl.GetDevices(AlarmEventServiceImpl.java:125) ~[classes/:?]
+	at cn.zh.zhbackend.canseeguan.controller.DataController.getEqpData(DataController.java:95) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-10-25 11:46:09.136 +0800	ERROR	org.apache.juli.logging.DirectJDKLog	175	http-nio-9988-exec-1	Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1100) ~[jackson-core-2.9.9.jar:2.9.9]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:915) ~[jackson-databind-2.9.9.3.jar:2.9.9.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:225) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:122) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.24.jar:9.0.24]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[?:1.8.0_221]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[?:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[?:1.8.0_221]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1261) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:793) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:746) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:736) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1156) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:394) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.coyote.Response.action(Response.java:209) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305) ~[tomcat-embed-core-9.0.24.jar:9.0.24]
+	... 42 more

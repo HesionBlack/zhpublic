@@ -30,7 +30,7 @@ public class DateService {
 
     public static BoxModel GetBoxDetailInfoByIdAndPosition(String id, String cellPos) {
         BoxModel resModel = new BoxModel();
-        resModel.setBoxId(Integer.valueOf(id));
+        resModel.setBoxId(id);
         Map<Integer, CellMappingModel> dicCellMapping = DataService.dicCellMapping;
         dicCellMapping.forEach((key, value) -> {
             if (value.cellMapString.equals(cellPos)) {
