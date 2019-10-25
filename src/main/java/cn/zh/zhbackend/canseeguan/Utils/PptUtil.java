@@ -20,9 +20,6 @@ import java.util.Map;
  * @create: 2019-10-23 14:14
  **/
 public class PptUtil {
-    public static String CheckActionUrl(String srcUrlWithSign){
 
-        return
-    }
 
 }
