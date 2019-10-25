@@ -10,7 +10,6 @@ package cn.zh.zhbackend.canseeguan.controller;/**
 
 import cn.zh.zhbackend.canseeguan.Config.Appconfig;
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
-import cn.zh.zhbackend.canseeguan.Utils.TokenUtils;
 import cn.zh.zhbackend.canseeguan.domain.*;
 import cn.zh.zhbackend.canseeguan.service.DataService;
 import cn.zh.zhbackend.canseeguan.service.DateService;
@@ -296,10 +295,6 @@ public class DataController {
     @PostMapping(value = "/data/GetBoxDetailInfoByIdAndPosition", produces = "application/json")
     public static ResModel GetBoxDetailInfoByIdAndPosition(@RequestBody BoxInfo rawBoxInfo, HttpServletResponse
             response) {
-        String token = TokenUtils.getToken("rawBoxInfo.id");
-        //设置请求头
-        response.setHeader("authorization", token);
-        response.setHeader("Access-Control-Expose-Headers", "authorization");
         ResModel res = new ResModel();
         res.setCode(200);
 
@@ -355,10 +350,6 @@ public class DataController {
      */
     @PostMapping(value = "/data/getTestTag", produces = "application/json")
     public ResModel getTestTags(HttpServletResponse response) {
-        String token = TokenUtils.getToken("rawBoxInfo.id");
-        //设置请求头
-        response.setHeader("authorization", token);
-        response.setHeader("Access-Control-Expose-Headers", "authorization");
         return dateService.getTestTags();
     }
 

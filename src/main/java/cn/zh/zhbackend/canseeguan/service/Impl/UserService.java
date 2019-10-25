@@ -1,6 +1,7 @@
 package cn.zh.zhbackend.canseeguan.service.Impl;
 
 
+import cn.zh.zhbackend.canseeguan.Utils.JwtUtil;
 import cn.zh.zhbackend.canseeguan.dao.UserDao;
 import cn.zh.zhbackend.canseeguan.domain.ResModel;
 import cn.zh.zhbackend.canseeguan.domain.User;
@@ -40,9 +41,6 @@ public class UserService implements IUserService {
         return userDao.add(user);
     }
 
-
-    @Autowired
-    private UserDaoImpl userDao;
 
     /**
      * 用户登录
@@ -92,7 +90,7 @@ public class UserService implements IUserService {
         String token = null;
         try {
             //该token过期时间为12h
-            token = JwtUtils.createJWT(claims, subject, 1000*60*60*12 );
+            token = JwtUtil.generateToken(userId);
         } catch (Exception e) {
             throw new RuntimeException("创建Token失败");
         }

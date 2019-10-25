@@ -1,7 +1,6 @@
 package cn.zh.zhbackend.canseeguan.Utils;
 
-import com.zh.service.UserService;
-import com.zh.utils.JwtUtils;
+import cn.zh.zhbackend.canseeguan.service.Impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -16,8 +15,8 @@ import java.util.Optional;
  */
 @Component
 public class JWTInterceptor implements HandlerInterceptor {
-@Autowired
-private UserService userService;
+    @Autowired
+    private UserService userService;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 允许跨域
@@ -31,7 +30,7 @@ private UserService userService;
         Optional.ofNullable(token)
                 .map(n -> {
                     try {
-                        return JwtUtils.parseJWT(n);
+                        return JwtUtil.validateToken(n);
                     } catch (Exception e) {
                         throw new RuntimeException("token不存在");
                     }

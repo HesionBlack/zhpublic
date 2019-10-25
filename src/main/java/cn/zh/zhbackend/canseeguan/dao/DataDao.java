@@ -1,5 +1,6 @@
 package cn.zh.zhbackend.canseeguan.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +10,7 @@ import java.util.Map;
 /**
  * @author Hxx
  */
+@Mapper
 @Repository
 public interface DataDao {
 

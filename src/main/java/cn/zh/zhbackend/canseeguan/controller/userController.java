@@ -1,6 +1,7 @@
 package cn.zh.zhbackend.canseeguan.controller;
 
 
+import cn.zh.zhbackend.canseeguan.Utils.AESUtil;
 import cn.zh.zhbackend.canseeguan.Utils.AjaxResponse;
 import cn.zh.zhbackend.canseeguan.Utils.JwtUtil;
 import cn.zh.zhbackend.canseeguan.domain.ResModel;
@@ -47,17 +48,6 @@ public class userController {
         return userService.findAll();
     }
 
-    //添加用户 //未实现
-    @PostMapping("/user/add")
-    public AjaxResponse Add(@RequestBody User user) throws Exception {
-        System.out.println(user);
-        ResModel login = userService.add(user);
-        if (login.getCode() == 200) {
-            return AjaxResponse.success(user);
-
-        }
-        return AjaxResponse.fail();
-    }
 
 
     /**
@@ -68,13 +58,13 @@ public class userController {
      */
     @PostMapping("/user/addUser")
     public AjaxResponse addUser(@RequestBody User user ,HttpServletResponse response) throws Exception {
-        String token = userService.getToken(user.userId);
+        String token = userService.getToken(user.getUserId());
         response.setHeader("authorization", token);
         response.setHeader("Access-Control-Expose-Headers", "authorization");
         User user1 = new User();
         user1.setUserId(user.getUserId());
 
-        String pwd = AESUtils.AESEncrypt(user.getUserPw(), KEY);
+        String pwd = AESUtil.aesEncrypt(user.getUserPw(), "zhonghuan13xxxxx");
         user1.setUserPw(pwd);
 
         if (userService.findByUserId(user.getUserId()) != null) {
@@ -97,27 +87,21 @@ public class userController {
      */
     @PostMapping(value = "/user/changePassword", produces = "application/json")
     public Map<String, Object> updateUser(@RequestBody User user, HttpServletResponse response) throws Exception {
-        String token = userService.getToken(user.userId);
-        System.out.println("cs:" + user);
-        //设置请求头
-        response.setHeader("authorization", token);
-        response.setHeader("Access-Control-Expose-Headers", "authorization");
-        String newPwd = AESUtils.AESEncrypt(user.getUserPwNew(), KEY);
+        String newPwd = AESUtil.aesEncrypt(user.getUserPw(),"zhonghuan13xxxxx");
         //判断当前用户输入的旧密码是否与数据库中该用户的密码一致
-        if (AESUtils.AESEncrypt(user.getUserPw(), KEY).equals(userService.findByUserId(user.getUserId()).getUserPw())) {
+        if (AESUtil.aesEncrypt(user.getUserPw(), "zhonghuan13xxxxx").equals(userService.findByUserId(user.getUserId()).getUserPw())) {
             user.setUserPwNew(newPwd);
             System.out.println("new:" + user);
             userService.updateUser(user);
-            result.put("isSuccess", true);
-            result.put("message", "修改成功");
-            result.put("code", 200);
-            result.put("data", user);
-            return result;
+            map.put("isSuccess", true);
+            map.put("message", "修改成功");
+            map.put("code", 200);
+            map.put("data", user);
         }
-        result.put("isSuccess", false);
-        result.put("message", "旧密码不正确，修改失败");
-        result.put("code", 500);
-        return result;
+        map.put("isSuccess", false);
+        map.put("message", "旧密码不正确，修改失败");
+        map.put("code", 500);
+        return map;
     }
 
 
