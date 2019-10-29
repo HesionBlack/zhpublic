@@ -415,7 +415,7 @@ public class DataController {
             * @return java.util.Map
     */
 
-    @PostMapping("/data/GetRoomCabinetSummary")
+    @PostMapping("/data/getRoomCabinetSummary")
     public Map GetRoomCabinetSummary(@RequestBody RoomModel roomModel) throws Exception{
 
         List<CabinetSummaryModel> roomModels = cellEventService.GetRoomCabinetSummary(roomModel);
@@ -426,5 +426,4 @@ public class DataController {
         map.put("data",roomModels);
         return map;
     }
-
 }
