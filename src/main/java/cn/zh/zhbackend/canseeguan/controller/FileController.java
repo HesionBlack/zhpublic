@@ -22,7 +22,7 @@ public class FileController {
     }
 
     //处理文件上传
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @RequestMapping(value = "/ppt/upload", method = RequestMethod.POST)
     @ResponseBody
     public String uploadImg(@RequestParam("file") MultipartFile file,
                          HttpServletRequest request) {
