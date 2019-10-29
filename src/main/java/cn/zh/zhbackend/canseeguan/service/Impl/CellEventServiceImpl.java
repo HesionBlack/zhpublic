@@ -36,7 +36,7 @@ public class CellEventServiceImpl implements ICellEventService {
     @Autowired
     private CellsqlDao cellsqlDao;
 
-    private DataService dataService;
+    private DataService dataService=new DataService();
 
 
     @Override
