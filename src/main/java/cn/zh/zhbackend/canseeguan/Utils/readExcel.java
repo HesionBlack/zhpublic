@@ -1,4 +1,5 @@
-package cn.zh.zhbackend.canseeguan.Utils;/**
+package cn.zh.zhbackend.canseeguan.Utils;
+/**
  * ClassName: readExcel <br/>
  * Description: <br/>
  * date: 2019/10/12 下午3:23<br/>
@@ -17,7 +18,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * @program: readexcel
@@ -55,7 +58,7 @@ public class readExcel {
     }
 
 
-    public  Map<Integer, TagMappingModel> TagMappingread(String filename) throws Exception {
+    public Map<Integer, TagMappingModel> TagMappingread(String filename) throws Exception {
 
         InputStream inputStream = null;
         int j = 0;
@@ -69,13 +72,13 @@ public class readExcel {
             Sheet sheet = wb.getSheetAt(0);
             //Row类型的迭代器  用于遍历访问每一行
             Iterator<Row> rowIterator = sheet.rowIterator();
-            Map<Integer,TagMappingModel> map = new HashMap<>();
+            Map<Integer, TagMappingModel> map = new HashMap<>();
             //循环迭代开始
             while (rowIterator.hasNext()) {
-                System.out.println("第j:" + j + "次循环开始");
+//                System.out.println("第j:" + j + "次循环开始");
                 //跳过前四行
                 if (j <= 3) {
-                    System.out.println("该行已经跳过");
+//                    System.out.println("该行已经跳过");
                     j++;
                     //读取一列
                     Row r = rowIterator.next();
@@ -125,42 +128,42 @@ public class readExcel {
 
                     switch (i) {
                         case 0:
-                            tagMappingModel.buildingId=cellValue;
+                            tagMappingModel.buildingId = cellValue;
                             break;
                         case 1:
-                            tagMappingModel.floorId=cellValue;
+                            tagMappingModel.floorId = cellValue;
                             break;
                         case 2:
-                            tagMappingModel.roomId=cellValue;
+                            tagMappingModel.roomId = cellValue;
                             break;
                         case 3:
-                            tagMappingModel.deviceId=cellValue;
+                            tagMappingModel.deviceId = cellValue;
                             break;
                         case 4:
-                            tagMappingModel.deviceName=cellValue;
+                            tagMappingModel.deviceName = cellValue;
                             break;
                         case 5:
-                            tagMappingModel.deviceType=cellValue;
+                            tagMappingModel.deviceType = cellValue;
                             break;
                         case 6:
-                            tagMappingModel.deviceMapString=cellValue;
+                            tagMappingModel.deviceMapString = cellValue;
                             break;
                         case 7:
-                            tagMappingModel.tagKey=cellValue;
+                            tagMappingModel.tagKey = cellValue;
                             break;
                         case 8:
-                            tagMappingModel.tagId=cellValue;
+                            tagMappingModel.tagId = cellValue;
                             break;
                         case 9:
-                            tagMappingModel.tagName=cellValue;
+                            tagMappingModel.tagName = cellValue;
                             break;
                         case 10:
-                            tagMappingModel.tagUnit=cellValue;
+                            tagMappingModel.tagUnit = cellValue;
                         default:
                     }
                 }
-                map.put(j,tagMappingModel);
-                System.out.println(" map:"+map.get(j));
+                map.put(j, tagMappingModel);
+//                System.out.println(" map:"+map.get(j));
                 j++;
 
             }
@@ -176,7 +179,7 @@ public class readExcel {
     }
 
 
-    public  Map<Integer, CellMappingModel> CellMappingread(String filename) throws Exception {
+    public Map<Integer, CellMappingModel> CellMappingread(String filename) throws Exception {
 
         InputStream inputStream = null;
         int j = 0;
@@ -190,12 +193,12 @@ public class readExcel {
             Sheet sheet = wb.getSheetAt(0);
             //Row类型的迭代器  用于遍历访问每一行
             Iterator<Row> rowIterator = sheet.rowIterator();
-            Map<Integer,CellMappingModel> map = new HashMap<>();
+            Map<Integer, CellMappingModel> map = new HashMap<>();
             //循环迭代开始
             while (rowIterator.hasNext()) {
                 //跳过前四行
                 if (j <= 3) {
-                    System.out.println("该行已经跳过");
+//                    System.out.println("该行已经跳过");
                     j++;
                     //读取一列
                     Row r = rowIterator.next();
@@ -247,40 +250,40 @@ public class readExcel {
 
                     switch (i) {
                         case 0:
-                            cellMappingModel.buildingId=cellValue;
+                            cellMappingModel.buildingId = cellValue;
                             break;
                         case 1:
-                            cellMappingModel.floorId=cellValue;
+                            cellMappingModel.floorId = cellValue;
                             break;
                         case 2:
-                            cellMappingModel.roomId=cellValue;
+                            cellMappingModel.roomId = cellValue;
                             break;
                         case 3:
-                            cellMappingModel.cabinetId=cellValue;
+                            cellMappingModel.cabinetId = cellValue;
                             break;
                         case 4:
-                                cellMappingModel.cellId=cellValue;
+                            cellMappingModel.cellId = cellValue;
                             break;
                         case 5:
-                            cellMappingModel.cellType=cellValue;
+                            cellMappingModel.cellType = cellValue;
                             break;
                         case 6:
-                            cellMappingModel.cellWidth=Double.valueOf(cellValue);
+                            cellMappingModel.cellWidth = Double.valueOf(cellValue);
                             break;
                         case 7:
-                            cellMappingModel.cellName=cellValue;
+                            cellMappingModel.cellName = cellValue;
                             break;
                         case 8:
-                            cellMappingModel.cellMapString=cellValue;
+                            cellMappingModel.cellMapString = cellValue;
                             break;
                         default:
                     }
                 }
-                map.put(j,cellMappingModel);
+                map.put(j, cellMappingModel);
                 j++;
 
             }
-            System.out.println("CellMapping:数据已经导入成功过");
+            System.out.println("CellMapping:数据已经导入成功");
             return map;
         } finally {
             if (inputStream != null) {
