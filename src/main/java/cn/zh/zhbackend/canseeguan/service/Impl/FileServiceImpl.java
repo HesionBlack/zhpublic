@@ -10,7 +10,9 @@ package cn.zh.zhbackend.canseeguan.service.Impl;/**
 
 import cn.zh.zhbackend.canseeguan.Config.YmlConfig;
 import cn.zh.zhbackend.canseeguan.dao.FileDao;
+import cn.zh.zhbackend.canseeguan.domain.ListQueryModel;
 import cn.zh.zhbackend.canseeguan.domain.PptModel;
+import cn.zh.zhbackend.canseeguan.domain.WhereCondition;
 import cn.zh.zhbackend.canseeguan.service.IFileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,8 +64,26 @@ public class FileServiceImpl implements IFileService {
         return map;
     }
 
-//    @Override
-//    public String CheckActionUrl(PptActionSignReqModel srcUrlModel) {
-//        return PptUtil;
-//    }
+    @Override
+    public void GetParamFuncList(ListQueryModel query) {
+        String filterCategory = "";
+        String filterKeyword = "";
+        WhereCondition[] whereConditions = query.whereConditions;
+        if(whereConditions !=null && whereConditions.length > 0){
+            for (int i = 0; i < whereConditions.length; i++) {
+                WhereCondition wc = whereConditions[i];
+                if(wc.field.equals("filter") && wc.value != null && wc.value.toString().trim() != ""){
+                    filterKeyword=wc.value.toString().trim();
+                }
+                if(wc.field.equals("category") && wc.value != null && wc.value.toString().trim() != ""){
+                    filterKeyword=wc.value.toString().trim();
+                }
+            }
+        }
+
+
+
+    }
+
+
 }
