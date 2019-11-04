@@ -1,0 +1,50 @@
+server:
+  port: 9988
+spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://admin:admin@192.168.0.51:27017/admin
+#      database: cyberArchive
+#      host: 192.168.0.51
+#      port: 27017
+#      username: admin
+#      password: admin
+#      authentication-database: admin
+  data:
+    mongodb:
+      custom:
+        hosts:
+          - 192.168.0.51
+        ports:
+          - 27017
+        replica-set: mgset-3590061
+        database: cyberArchive
+        authentication-database: admin
+        connections-per-host: 2
+        min-connections-per-host: 20
+  datasource:
+    url: jdbc:mysql://192.168.1.102:3306/thams?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Password123
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://192.168.0.51:27017/cyberArchive
+logging:
+  level:
+    cn:
+      zh:
+        zhbackend:
+          canseeguan:
+            dao: debug
+mybatis:
+  config-location: classpath:mybatis-config.xml
+
+##pdf文件根目录
+pdfRootPath: /root/danganguan/
+

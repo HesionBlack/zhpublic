@@ -289,7 +289,7 @@ public class CellEventServiceImpl implements ICellEventService {
 
     @Override
     public List<CellMappingModel> searchCellbySpace(ListQueryModel query) {
-        dataService.UpdateCellTickCache();
+//        dataService.UpdateCellTickCache();
         List<CellMappingModel> cellMappingModels = new ArrayList<>(0);
         try {
             if (query.whereConditions != null) {
@@ -319,7 +319,7 @@ public class CellEventServiceImpl implements ICellEventService {
 
     @Override
     public List<CabinetSummaryModel> GetRoomCabinetSummary(RoomModel roomModel) {
-        dataService.UpdateCellTickCache();
+//        dataService.UpdateCellTickCache();
         //List<CabinetModel> cabinetModels = new ArrayList<>();
         //单元格映射实体数组集合    最后返回 cabinetSummaryModels
         List<CellMappingModel> cellMappingModels = new ArrayList<>();

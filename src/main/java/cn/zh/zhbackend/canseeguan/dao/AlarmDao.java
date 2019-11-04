@@ -25,6 +25,7 @@ import java.util.List;
  * @author: zxb
  * @create: 2019-10-11 13:41
  **/
+@SuppressWarnings("unchecked")
 @Component
 public class AlarmDao {
     @Autowired
@@ -73,14 +74,14 @@ public class AlarmDao {
                     switch (whereConditions[i].getMethod()) {
                         //进行IN查询
                         case IN:
-                            System.out.println("已经进入IN");
+                            System.out.println("IN查询");
                             Query query = new Query();
                             ArrayList<String> arrayList= (ArrayList<String>) whereConditions[i].getValue();
                             String[] condiValue = arrayList.toArray(new String[2]);
                             query.addCriteria(
                                     new Criteria().orOperator(
-                                            Criteria.where(field.toString()).in(condiValue[0]),
-                                            Criteria.where(field.toString()).in(condiValue[1])
+                                            Criteria.where(field.toString()).is(condiValue[0]),
+                                            Criteria.where(field.toString()).is(condiValue[1])
                                     ));
                             //查看请求数据中的排序条件
                             if (orderConditions != null && orderConditions.length > 0) {
@@ -101,8 +102,6 @@ public class AlarmDao {
                             System.out.println("开始查询");
                             alarmRawModelList = mongoTemplate.find(query, Alarm.class);
                             System.out.println("GetAlarmList_IN：" + alarmRawModelList);
-//                            resModel.setData(alarmRawModelList);
-//                            System.out.println("GetAlarmList_IN：" + resModel);
                             break;
                         case LIKE:
                             break;

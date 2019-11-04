@@ -102,7 +102,7 @@ public class AlarmEventServiceImpl implements IAlarmEventService {
         //遍历结果集
         Map<String, DeviceModel> mappingResultHandle = new HashMap<>();
         List<TagModel> tagModels = new ArrayList<>(2);
-        if (!(dicTagDeviceMapping.isEmpty()) && null != dicTagDeviceMapping) {
+        if (!(dicTagDeviceMapping.isEmpty()) && !dicTagDeviceMapping.isEmpty()) {
             log.info("dicTagDeviceMapping has value");
             if (deviceIds.length > 0) {
                 log.info("deviceId > 0 ");

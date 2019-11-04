@@ -16,10 +16,22 @@
 
     <properties>
         <java.version>1.8</java.version>
+
     </properties>
+    <repositories>
+        <repository>
+            <id>com.e-iceblue</id>
+            <name>e-iceblue</name>
+            <url>http://repo.e-iceblue.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
     <dependencies>
 
-
+        <dependency>
+            <groupId> e-iceblue </groupId>
+            <artifactId>spire.presentation</artifactId>
+            <version>2.10.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -123,6 +135,35 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <!--配置本地jar包在项目中的存放路径-->
+                            <directory>${project.basedir}/src/main/resource</directory>
+                            <!--配置打包时jar包的存放路径-->
+                            <targetPath>/classes</targetPath>
+                            <includes>
+                                <include>**/*.jar</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <!--配置本地jar包在项目的存放路径-->
+                    <compilerArguments>
+                        <extdirs>${project.basedir}/src/main/resource</extdirs>
+                    </compilerArguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -1,12 +1,11 @@
 package cn.zh.zhbackend.canseeguan.Utils;
 
+
+
 import com.spire.presentation.Presentation;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class FileUtil {
